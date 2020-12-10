@@ -41,7 +41,7 @@ class FrontController extends Controller
         //return view('undercons');
         return view('index');
     }
-    public function home()
+    public function mon()
     {
         return view('undercons');
         //return view('index');
