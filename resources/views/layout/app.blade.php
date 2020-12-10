@@ -42,6 +42,13 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/gpower/assets/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+	<meta name="description" content="Contribute to Mongolian energy development through localization of high tech, installation and construction with global standard, excellent consulting service.">
+
+	<meta property="og:url"           content="http://g-power.mn" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="G-Power | Energy is future, make it bright" />
+	<meta property="og:description"   content="Contribute to Mongolian energy development through localization of high tech, installation and construction with global standard, excellent consulting service." />
+	<meta property="og:image"         content="http://g-power.mn/gpower/assets/cover-2.jpg" />
 
 	@section('externalcss')
     @show
@@ -94,8 +101,8 @@
 
 							<ul class="menu-container">
 								<!-- <li class="menu-item"><a class="menu-link" href="/about/info"><div>About</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/projects"><div>Projects</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/news"><div>News</div></a></li>-->
+								<li class="menu-item"><a class="menu-link" href="/projects"><div>Projects</div></a></li>-->
+								<li class="menu-item"><a class="menu-link" href="/news"><div>News</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="/contact"><div>Contact</div></a></li> 
 							</ul>
 

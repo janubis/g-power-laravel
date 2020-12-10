@@ -116,9 +116,13 @@ class FrontController extends Controller
         return view('news',$data);
     }
 
-    public function singleNews()
+    public function singleNews($key)
     {
-        return view('news-single');
+        //return view('index');
+        $data['currentnews'] = News::findOrFail($key);
+        $data['othernews'] = News::orderBy('id','desc')->paginate(4);
+        //dd($Post);
+        return view('news-single', $data);
     }
     
 }

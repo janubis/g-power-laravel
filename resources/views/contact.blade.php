@@ -107,7 +107,6 @@
 
 										<div class="col-12 form-group">
 											<button class="button button-rounded button-xlarge m-0 center font-weight-medium nott ls0 font-weight-normal" type="submit" value="submit">Send Message</button>
-											<input type="submit" value="send"> </button>
 										</div>
 									</div>
 								</form>
