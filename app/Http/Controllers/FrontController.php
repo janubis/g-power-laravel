@@ -41,6 +41,11 @@ class FrontController extends Controller
         //return view('undercons');
         return view('index');
     }
+    public function home()
+    {
+        return view('undercons');
+        //return view('index');
+    }
 
     public function teams()
     {

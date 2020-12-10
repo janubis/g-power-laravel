@@ -78,8 +78,8 @@
 					<div class="vh-100">
 						<div class="vertical-middle">
 							<div class="heading-block center border-bottom-0">
-								<h1>Site is Under Maintenance</h1>
-								<span>Please check back in sometime.</span>
+								<h1>Монгол хэл дээрхи вэб хуудас түр засвартай байна.</h1>
+								<span>Тун удахгүй</span>
 							</div>
 						</div>
 					</div>

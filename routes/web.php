@@ -18,6 +18,7 @@ use App\Http\Controllers\FrontController;
 }); */
 
 Route::get('/', [FrontController::class, 'index']);
+Route::get('/mn', [FrontController::class, 'mon']);
 Route::get('/home', [FrontController::class, 'home']);
 Route::get('/about/teams', [FrontController::class, 'teams']);
 Route::get('/about/info', [FrontController::class, 'about']);
