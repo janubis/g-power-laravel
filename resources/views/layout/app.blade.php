@@ -100,8 +100,8 @@
 						<nav class="primary-menu">
 
 							<ul class="menu-container">
-								<!-- <li class="menu-item"><a class="menu-link" href="/about/info"><div>About</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/projects"><div>Projects</div></a></li>-->
+								<!-- <li class="menu-item"><a class="menu-link" href="/about/info"><div>About</div></a></li>-->
+								<li class="menu-item"><a class="menu-link" href="/projects"><div>Projects</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="/news"><div>News</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="/contact"><div>Contact</div></a></li> 
 							</ul>
