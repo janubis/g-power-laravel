@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 
 use App\News;
+use App\Project;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -102,12 +103,16 @@ class FrontController extends Controller
 
     public function projects()
     {
-        return view('index');
+        $data['projects'] = Project::orderBy('id','desc')->paginate(100);;
+        return view('projects', $data);
     }
 
-    public function singleProjects()
+    public function singleProjects($key)
     {
-        return view('index');
+        $data['currentproject'] = Project::findOrFail($key);
+        $data['gallery']=json_decode($data['currentproject']->gallery);
+        //$data['gallery'] = $data['currentproject']->items()->get();
+        return view('portfolio-single', $data);
     }
 
     public function news()
