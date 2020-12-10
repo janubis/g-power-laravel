@@ -27,6 +27,7 @@
 				<div class="container clearfix">
 
 					<div class="row col-mb-30 posts-md">
+							@foreach ($news as $singlenews)
 							<div class="entry col-md-4 col-sm-6 col-12">
 								<div class="grid-inner">
 									<div class="entry-image">
