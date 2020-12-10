@@ -33,7 +33,8 @@ class FrontController extends Controller
     //home, teams, about, contact, projects, singleProjects, news, singleNews
     public function index()
     {
-        return view('undercons');
+        //return view('undercons');
+        return view('index');
     }
     public function home()
     {
