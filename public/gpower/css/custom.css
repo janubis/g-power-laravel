@@ -1,0 +1,39 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+
+
+h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > span:not(.nocolor):not(.badge), h4 > span:not(.nocolor):not(.badge), h5 > span:not(.nocolor):not(.badge), h6 > span:not(.nocolor):not(.badge) {
+    color: #198e0e;
+}
+
+.bg-color, .bg-color #header-wrap {
+    background-color: #198e0e !important;
+}
+.fbox-content p {
+	margin-top: 0px;
+}
+.pagination.pagination-circle .page-item .page-link {
+	border-radius: 5px;
+}
+.fbox-icon i, .fbox-icon img {
+	background-color: #ffffff;
+}
+#header-wrap {
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.content-wrap {
+	padding: 50px 0;
+}
+.portfolio-parallax .portfolio-image {
+	background-size: cover !important;
+}
+@media only screen and (max-width: 960px){
+	.header-row {
+		margin: 15px 0px;
+	}
+}
+
