@@ -11,8 +11,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-
-
 class FrontController extends Controller
 {
     /**
@@ -31,7 +29,6 @@ class FrontController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    //home, teams, about, contact, projects, singleProjects, news, singleNews
     public function index()
     {
         //return view('undercons');
@@ -39,13 +36,11 @@ class FrontController extends Controller
     }
     public function home()
     {
-        //return view('undercons');
         return view('index');
     }
     public function mon()
     {
         return view('undercons');
-        //return view('index');
     }
 
     public function teams()
@@ -55,6 +50,7 @@ class FrontController extends Controller
 
     public function about()
     {
+        
         return view('about');
     }
 

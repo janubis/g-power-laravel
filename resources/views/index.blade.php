@@ -334,5 +334,5 @@
 @section('pagejavascript')
     @parent
     
-	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCQKjiaaW9l54s8ILhnTJKxLhmQ06Wcz_o"></script>
+	<script src="https://maps.google.com/maps/api/js?key={{env('GOOGLE_KEY')}}"></script>
 @endsection
