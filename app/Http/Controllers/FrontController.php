@@ -45,12 +45,12 @@ class FrontController extends Controller
 
     public function teams()
     {
-        return view('index');
+        return view('teams');
     }
 
     public function about()
     {
-        
+
         return view('about');
     }
 

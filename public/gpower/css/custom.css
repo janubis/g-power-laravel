@@ -36,4 +36,19 @@ h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > s
 		margin: 15px 0px;
 	}
 }
-
+.sidebar-widgets-wrap .widget_links ul li, .sidebar-widgets-wrap .widget_links ul li a {
+	color: #343a40 !important;
+    border-bottom: 1px solid #d4d4d4;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.sidebar-widgets-wrap .widget_links ul li.active, .sidebar-widgets-wrap .widget_links ul li.active a {
+	color: #198e0e !important;
+    border-bottom: 1px solid #bdd6bb;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
