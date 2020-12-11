@@ -33,61 +33,31 @@
 
 							<div class="row col-mb-50 mb-0">
 
-								<div class="col-lg-6">
-
-									<div class="team team-list row align-items-center">
-										<div class="team-image col-sm-6">
-											<img src="/gpower/assets/teams.jpg" alt="John Doe">
-										</div>
-										<div class="team-desc col-sm-6">
-											<div class="team-title"><h4>John Doe</h4><span>CEO</span></div>
-											<div class="team-content">
-												<p>Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.</p>
+								@foreach ($teams as $member)
+									@if ($member->is_manager == 'manager')
+									    <div class="col-lg-6">
+											<div class="team team-list row align-items-center">
+												<div class="team-image col-sm-6">
+													<img src="\storage\{{$member->avatar}}" alt="{{$member->name_eng}}">
+												</div>
+												<div class="team-desc col-sm-6">
+													<div class="team-title"><h4>{{$member->name_eng}}</h4><span>{{$member->title_eng}}</span></div>
+													<div class="team-content">
+														<p>{{$member->about_eng}}</p>
+													</div>
+													<a href="{{$member->facebook}}" class="social-icon si-rounded si-small si-facebook">
+														<i class="icon-facebook"></i>
+														<i class="icon-facebook"></i>
+													</a>
+													<a href="{{$member->twitter}}" class="social-icon si-rounded si-small si-twitter">
+														<i class="icon-twitter"></i>
+														<i class="icon-twitter"></i>
+													</a>
+												</div>
 											</div>
-											<a href="#" class="social-icon si-rounded si-small si-facebook">
-												<i class="icon-facebook"></i>
-												<i class="icon-facebook"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-twitter">
-												<i class="icon-twitter"></i>
-												<i class="icon-twitter"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-gplus">
-												<i class="icon-gplus"></i>
-												<i class="icon-gplus"></i>
-											</a>
 										</div>
-									</div>
-
-								</div>
-
-								<div class="col-lg-6">
-
-									<div class="team team-list row align-items-center">
-										<div class="team-image col-sm-6">
-											<img src="/gpower/assets/teams.jpg" alt="Nix Maxwell">
-										</div>
-										<div class="team-desc col-sm-6">
-											<div class="team-title"><h4>Nix Maxwell</h4><span>Support</span></div>
-											<div class="team-content">
-												<p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience in the field compassion, inspire breakthroughs planned giving.</p>
-											</div>
-											<a href="#" class="social-icon si-rounded si-small si-forrst">
-												<i class="icon-forrst"></i>
-												<i class="icon-forrst"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-skype">
-												<i class="icon-skype"></i>
-												<i class="icon-skype"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-flickr">
-												<i class="icon-flickr"></i>
-												<i class="icon-flickr"></i>
-											</a>
-										</div>
-									</div>
-
-								</div>
+									@endif
+								@endforeach
 
 							</div>
 
@@ -98,176 +68,37 @@
 
 							<div class="row col-mb-50 mb-0">
 
-								<div class="col-lg-3">
-
-									<div class="team team-list row align-items-center">
-										<div class="team-image col-sm-12">
-											<img src="/gpower/assets/teams.jpg" alt="John Doe">
-										</div>
-										<div class="team-desc col-sm-12">
-											<div class="team-title"><h4>John Doe</h4><span>CEO</span></div>
-											<div class="team-content">
-												<p>Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.</p>
+								@foreach ($teams as $member)
+									@if ($member->is_manager == 'staff')
+									    <div class="col-lg-3">
+											<div class="team team-list row align-items-center">
+												<div class="team-image col-sm-12">
+													<img src="\storage\{{$member->avatar}}" alt="{{$member->name_eng}}">
+												</div>
+												<div class="team-desc col-sm-12">
+													<div class="team-title"><h4>{{$member->name_eng}}</h4><span>{{$member->title_eng}}</span></div>
+													<div class="team-content">
+														<p>{{$member->about_eng}}</p>
+													</div>
+													<a href="{{$member->facebook}}" class="social-icon si-rounded si-small si-facebook">
+														<i class="icon-facebook"></i>
+														<i class="icon-facebook"></i>
+													</a>
+													<a href="{{$member->twitter}}" class="social-icon si-rounded si-small si-twitter">
+														<i class="icon-twitter"></i>
+														<i class="icon-twitter"></i>
+													</a>
+												</div>
 											</div>
-											<a href="#" class="social-icon si-rounded si-small si-facebook">
-												<i class="icon-facebook"></i>
-												<i class="icon-facebook"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-twitter">
-												<i class="icon-twitter"></i>
-												<i class="icon-twitter"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-gplus">
-												<i class="icon-gplus"></i>
-												<i class="icon-gplus"></i>
-											</a>
 										</div>
-									</div>
-
-								</div>
-
-								<div class="col-lg-3">
-
-									<div class="team team-list row align-items-center">
-										<div class="team-image col-sm-12">
-											<img src="/gpower/assets/teams.jpg" alt="Nix Maxwell">
-										</div>
-										<div class="team-desc col-sm-12">
-											<div class="team-title"><h4>Nix Maxwell</h4><span>Support</span></div>
-											<div class="team-content">
-												<p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience in the field compassion, inspire breakthroughs planned giving.</p>
-											</div>
-											<a href="#" class="social-icon si-rounded si-small si-forrst">
-												<i class="icon-forrst"></i>
-												<i class="icon-forrst"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-skype">
-												<i class="icon-skype"></i>
-												<i class="icon-skype"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-flickr">
-												<i class="icon-flickr"></i>
-												<i class="icon-flickr"></i>
-											</a>
-										</div>
-									</div>
-
-								</div>
-								<div class="col-lg-3">
-
-									<div class="team team-list row align-items-center">
-										<div class="team-image col-sm-12">
-											<img src="/gpower/assets/teams.jpg" alt="Nix Maxwell">
-										</div>
-										<div class="team-desc col-sm-12">
-											<div class="team-title"><h4>Nix Maxwell</h4><span>Support</span></div>
-											<div class="team-content">
-												<p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience in the field compassion, inspire breakthroughs planned giving.</p>
-											</div>
-											<a href="#" class="social-icon si-rounded si-small si-forrst">
-												<i class="icon-forrst"></i>
-												<i class="icon-forrst"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-skype">
-												<i class="icon-skype"></i>
-												<i class="icon-skype"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-flickr">
-												<i class="icon-flickr"></i>
-												<i class="icon-flickr"></i>
-											</a>
-										</div>
-									</div>
-
-								</div>
-								<div class="col-lg-3">
-
-									<div class="team team-list row align-items-center">
-										<div class="team-image col-sm-12">
-											<img src="/gpower/assets/teams.jpg" alt="Nix Maxwell">
-										</div>
-										<div class="team-desc col-sm-12">
-											<div class="team-title"><h4>Nix Maxwell</h4><span>Support</span></div>
-											<div class="team-content">
-												<p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience in the field compassion, inspire breakthroughs planned giving.</p>
-											</div>
-											<a href="#" class="social-icon si-rounded si-small si-forrst">
-												<i class="icon-forrst"></i>
-												<i class="icon-forrst"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-skype">
-												<i class="icon-skype"></i>
-												<i class="icon-skype"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-flickr">
-												<i class="icon-flickr"></i>
-												<i class="icon-flickr"></i>
-											</a>
-										</div>
-									</div>
-
-								</div>
-								<div class="col-lg-3">
-
-									<div class="team team-list row align-items-center">
-										<div class="team-image col-sm-12">
-											<img src="/gpower/assets/teams.jpg" alt="Nix Maxwell">
-										</div>
-										<div class="team-desc col-sm-12">
-											<div class="team-title"><h4>Nix Maxwell</h4><span>Support</span></div>
-											<div class="team-content">
-												<p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience in the field compassion, inspire breakthroughs planned giving.</p>
-											</div>
-											<a href="#" class="social-icon si-rounded si-small si-forrst">
-												<i class="icon-forrst"></i>
-												<i class="icon-forrst"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-skype">
-												<i class="icon-skype"></i>
-												<i class="icon-skype"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-flickr">
-												<i class="icon-flickr"></i>
-												<i class="icon-flickr"></i>
-											</a>
-										</div>
-									</div>
-
-								</div>
-								<div class="col-lg-3">
-
-									<div class="team team-list row align-items-center">
-										<div class="team-image col-sm-12">
-											<img src="/gpower/assets/teams.jpg" alt="Nix Maxwell">
-										</div>
-										<div class="team-desc col-sm-12">
-											<div class="team-title"><h4>Nix Maxwell</h4><span>Support</span></div>
-											<div class="team-content">
-												<p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience in the field compassion, inspire breakthroughs planned giving.</p>
-											</div>
-											<a href="#" class="social-icon si-rounded si-small si-forrst">
-												<i class="icon-forrst"></i>
-												<i class="icon-forrst"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-skype">
-												<i class="icon-skype"></i>
-												<i class="icon-skype"></i>
-											</a>
-											<a href="#" class="social-icon si-rounded si-small si-flickr">
-												<i class="icon-flickr"></i>
-												<i class="icon-flickr"></i>
-											</a>
-										</div>
-									</div>
-
-								</div>
-
+									@endif
+								@endforeach
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="sidebar col-lg-2">
-					<div class="sidebar-widgets-wrap">
+					<div class="sidebar-widgets-wrap" style="margin-top: 80px;">
 						<div class="widget widget_links clearfix">
 							<ul>
 								<li><a href="/about/info"><div>About Us</div></a></li>

@@ -75,8 +75,8 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
-							<a href="/" class="standard-logo" data-sticky-logo="/gpower/assets/logo-edited.png"><img src="/gpower/assets/logo-edited.png" alt="G-Power Logo"></a>
-							<a href="/" class="retina-logo" data-sticky-logo="/gpower/assets/logo-edited.png"><img src="/gpower/assets/logo-edited.png" alt="G-Power Logo"></a>
+							<a href="/" class="standard-logo" data-sticky-logo="\storage\{{$general->header_logo}}"><img src="\storage\{{$general->header_logo}}" alt="G-Power Logo"></a>
+							<a href="/" class="retina-logo" data-sticky-logo="\storage\{{$general->header_logo}}"><img src="\storage\{{$general->header_logo}}" alt="G-Power Logo"></a>
 						</div><!-- #logo end -->
 
 						<div class="header-misc top-links">
@@ -88,7 +88,7 @@
 									</ul>
 								</li>
 							</ul>
-							<a class="top-phone" href="http://119.40.99.111"><i class="icon-solar-panel"></i> <span class="d-none d-md-inline-block">DASHBOARD</span></a>
+							<a class="top-phone" href="http://119.40.99.111"><i class="icon-solar-panel"></i> <span class="d-none d-md-inline-block">{{$general->menu_dashboard}}</span></a>
 						</div>
 
 						<div id="primary-menu-trigger">
@@ -100,10 +100,10 @@
 						<nav class="primary-menu">
 
 							<ul class="menu-container">
-								<li class="menu-item"><a class="menu-link" href="/about/info"><div>About</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/projects"><div>Projects</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/news"><div>News</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/contact"><div>Contact</div></a></li> 
+								<li class="menu-item"><a class="menu-link" href="/about/info"><div>{{$general->menu_about}}</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="/projects"><div>{{$general->menu_projects}}</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="/news"><div>{{$general->menu_news}}</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="/contact"><div>{{$general->menu_contact}}</div></a></li> 
 							</ul>
 
 						</nav><!-- #primary-menu end -->
@@ -130,31 +130,28 @@
 
 						<div class="row">
 							<div class="col-sm-3">
-								<a href="#"><img src="/gpower/assets/logo-pure-black.png" alt="Logo Footer" class="mb-4" height="50"></a><br>
+								<a href="#"><img src="\storage\{{$general->footer_logo}}" alt="Logo Footer" class="mb-4" height="50"></a><br>
 								
-								<a href="https://www.facebook.com/g.power.mn" class="social-icon si-small si-light si-facebook" title="Facebook">
+								<a href="{{$general->facebook}}" class="social-icon si-small si-light si-facebook" title="Facebook">
 									<i class="icon-facebook"></i>
 									<i class="icon-facebook"></i>
 								</a>
-								<a href="https://twitter.com/Gpower08151655" class="social-icon si-small si-light si-twitter" title="Twitter">
+								<a href="{{$general->twitter}}" class="social-icon si-small si-light si-twitter" title="Twitter">
 									<i class="icon-twitter"></i>
 									<i class="icon-twitter"></i>
 								</a>
-								<!-- <a href="#" class="social-icon si-small si-light si-github" title="Github">
-									<i class="icon-github"></i>
-									<i class="icon-github"></i>
+								<a href="{{$general->youtube}}" class="social-icon si-small si-light si-youtube" title="Youtube">
+									<i class="icon-youtube"></i>
+									<i class="icon-youtube"></i>
 								</a>
-								<a href="#" class="social-icon si-small si-light si-instagram" title="instagram">
+								<!-- <a href="#" class="social-icon si-small si-light si-instagram" title="instagram">
 									<i class="icon-instagram"></i>
 									<i class="icon-instagram"></i>
 								</a> -->
 								
 							</div>
 							<div class="col-sm-9">
-								<p class="text-white-50">G-Power LLC is a high-tech enterprise established in 2013. Company is closely works with national universities, institutions and relevant fields comapnies. Company aims to take knowledge base project supported by companies specially from overseas.</p>
-								<p class="text-white-50">Contribute to Mongolian energy development through localization of high tech, installation and construction with global standard, excellent consulting service.</p>
-									
-								</ul>
+								{!! $general->footer_description !!}
 							</div>
 						</div>
 
@@ -175,7 +172,7 @@
 					<div class="row">
 						<div class="col-8">
 
-							<p class="mb-2 text-white-50">Copyrights &copy; 2020 All Rights Reserved by G-Power LLC.</p>
+							<p class="mb-2 text-white-50">{!! $general->copyright !!}</p>
 							<!-- <div class="copyright-links text-white-50">
 								<a href="#" class="text-white-50">Terms of Use</a> / <a href="#" class="text-white-50">Privacy Policy</a>
 							</div> -->

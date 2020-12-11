@@ -91,23 +91,23 @@
 								</div>
 								<div class="row">
 									<div class="col-6 col-sm-6 mb-4">
-										<div class="counter color font-weight-semibold"><span data-from="1" data-to="6" data-refresh-interval="2" data-speed="600"></span>+</div>
+										<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumproj}}" data-refresh-interval="2" data-speed="600"></span>+</div>
 										<h5 class="mt-0 font-weight-medium">Projects</h5>
 									</div>
 
 									<div class="col-6 col-sm-6 mb-4">
-										<div class="counter color font-weight-semibold"><span data-from="1" data-to="370" data-refresh-interval="11" data-speed="900"></span>MW</div>
+										<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>MW</div>
 										<h5 class="mt-0 font-weight-medium">Installed Capacity</h5>
 									</div>
 
 									<div class="col-6 col-sm-6 mb-4">
-										<div class="counter color font-weight-semibold"><span data-from="1" data-to="210" data-refresh-interval="3" data-speed="1000"></span>+</div>
+										<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>+</div>
 										<h5 class="mt-0 font-weight-medium">Panels</h5>
 									</div>
 
 									<div class="col-6 col-sm-6 mb-4">
-										<div class="counter color font-weight-semibold"><span data-from="100" data-to="4500" data-refresh-interval="100" data-speed="1500"></span>kWh</div>
-										<h5 class="mt-0 font-weight-medium">Generated kWh</h5>
+										<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>kWh</div>
+										<h5 class="mt-0 font-weight-medium">Yield Forecast.kWh</h5>
 									</div>
 								</div>
 								<p class="text-muted">We offer engineering, procurement, construction, commissioning, operation and maintenance services for on- and off-grid PV systems and plants of any scale.</p>
@@ -154,21 +154,21 @@
 							<div class="carousel-column-container">
 								<ul class="carousel-column column-1">
 									<li class="carousel-grid-item">
-										<a href="/gpower/assets/project-1.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-1.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-1.jpg');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/gpower/assets/project-2.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-2.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-2.jpg');"></a>
 									</li>
 								</ul>
 								<ul class="carousel-column column-2">
 									<li class="carousel-grid-item">
-										<a href="/gpower/assets/project-3.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-3.jpg'); min-height: 300px"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-3.jpg'); min-height: 300px"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/gpower/assets/project-4.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-4.jpg'); min-height: 280px"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-4.jpg'); min-height: 280px"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/gpower/assets/project-5.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-5.jpg'); min-height: 200px"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-5.jpg'); min-height: 200px"></a>
 									</li>
 								</ul>
 							</div>
@@ -178,7 +178,7 @@
 							<div class="carousel-column-container">
 								<ul class="carousel-column column-1">
 									<li class="carousel-grid-item">
-										<a href="/gpower/assets/project-6.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-6.jpg'); min-height: 324px"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-6.jpg'); min-height: 324px"></a>
 									</li>
 									<li class="carousel-grid-item">
 										<div class="item bg-color d-flex align-items-center px-4" style="min-height: 480px">
@@ -191,13 +191,13 @@
 								</ul>
 								<ul class="carousel-column column-2">
 									<li class="carousel-grid-item">
-										<a href="assets/project-8.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-8.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-8.jpg');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="assets/project-9.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-9.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-9.jpg');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="assets/project-10.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-10.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-10.jpg');"></a>
 									</li>
 								</ul>
 							</div>
@@ -207,7 +207,7 @@
 							<div class="carousel-column-container">
 								<ul class="carousel-column column-1">
 									<li class="carousel-grid-item">
-										<a href="/gpower/assets/project-11.jpg" data-lightbox="gallery-item" class="item bg-color d-flex align-items-center px-4 img-overlay" style="background-image: url('/gpower/assets/project-11.jpg'); min-height: 350px">
+										<a href="/projects" class="item bg-color d-flex align-items-center px-4 img-overlay" style="background-image: url('/gpower/assets/project-11.jpg'); min-height: 350px">
 											<blockquote class="blockquote border-0 mb-0">
 												<p class="mb-3 text-white">"The potential of renewable energy is immense."</p>
 												<footer class="blockquote-footer text-white-50 font-italic">Tulsi Tanti</footer>
@@ -215,18 +215,18 @@
 										</a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="assets/project-12.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-12.jpg'); min-height: 453px"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-12.jpg'); min-height: 453px"></a>
 									</li>
 								</ul>
 								<ul class="carousel-column column-2">
 									<li class="carousel-grid-item">
-										<a href="assets/project-13.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-13.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-13.jpg');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="assets/project-7.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-7.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-7.jpg');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="assets/project-14.jpg" data-lightbox="gallery-item" class="item" style="background-image: url('/gpower/assets/project-14.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-14.jpg');"></a>
 									</li>
 								</ul>
 							</div>
@@ -239,11 +239,15 @@
 					<div class="container-full" style="padding: 120px 0 0 0">
 						<div class="heading-block border-bottom-0 center">
 							<div class="before-heading">installed power of built solar power station</div>
-							<h2 class="nott font-weight-semibold">719,5 МW</h2>
+							<h2 class="nott font-weight-semibold"> {{$summapdata}} МW</h2>
 							<p class="mb-0 mt-1"><span class="font-weight-semibold">Implemented projects</span></p>
 						</div>
 
-						<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[{address: "47.923287, 106.917476",html: "<h4><span>PV power plant (25 MW)</span></h4><p><strong>Location:</strong> The Altai Republic<br><strong>Installed capacity:</strong> 25 MW<br><strong>Year of comissioning:</strong> 2019</p>"}, {address: "47.922013, 106.923422",html: "<h4><span>PV power plant (25 MW)</span></h4><p><strong>Location:</strong> The Altai Republic<br><strong>Installed capacity:</strong> 25 MW<br><strong>Year of comissioning:</strong> 2019</p>"}, {address: "47.920060, 106.909757",html: "<h4><span>PV power plant (25 MW)</span></h4><p><strong>Location:</strong> The Altai Republic<br><strong>Installed capacity:</strong> 25 MW<br><strong>Year of comissioning:</strong> 2019</p>"}, {address: "47.917854, 106.917725",html: "<h4><span>PV power plant (25 MW)</span></h4><p><strong>Location:</strong> The Altai Republic<br><strong>Installed capacity:</strong> 25 MW<br><strong>Year of comissioning:</strong> 2019</p>"}, {address: "47.932745, 106.950729",html: "<h4><span>PV power plant (25 MW)</span></h4><p><strong>Location:</strong> The Altai Republic<br><strong>Installed capacity:</strong> 25 MW<br><strong>Year of comissioning:</strong> 2019</p>"}, {address: "47.917126, 107.068435",html: "<h4><span>PV power plant (25 MW)</span></h4><p><strong>Location:</strong> The Altai Republic<br><strong>Installed capacity:</strong> 25 MW<br><strong>Year of comissioning:</strong> 2019</p>"}]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
+						<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
+						@foreach ($mapdata as $singlepin)
+						{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->project_eng}}</span></h4><p><strong>Location:</strong> {{$singlepin->location_eng}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
+						@endforeach
+						]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
 					</div>
 				</div>
 
@@ -257,60 +261,27 @@
 						<div class="clear"></div>
 
 						<div class="row col-mb-30 posts-md">
-							<div class="entry col-md-4 col-sm-6 col-12">
-								<div class="grid-inner">
-									<div class="entry-image">
-										<a href="/gpower/images/blog/full/1.jpg" data-lightbox="image"><img src="/gpower/assets/news-1-min.jpg" alt="Standard Post with Image"></a>
-									</div>
-									<div class="entry-title title-xs nott">
-										<h3><a href="news-single.html">Installation of the rooftop PV system for MUST is done and handed</a></h3>
-									</div>
-									<div class="entry-meta">
-										<p class="page-title-right text-black-50 mb-0"><i class="icon-calendar3"></i> 1th May 2020</p>
-
-									</div>
-									<div class="entry-content">
-										<p>We have successfully completed the construction of a 16kWdc/15kWac PV system on the roof of the 8th building of the MUST, such as funded by the UNDP and NAMA Project at the Ministry of Construction and Urban Development, and handed it over to MUST.</p>
-									</div>
-								</div>
-							</div>
 							
+							@foreach ($news as $singlenews)
 							<div class="entry col-md-4 col-sm-6 col-12">
 								<div class="grid-inner">
 									<div class="entry-image">
-										<a href="/gpower/images/blog/full/1.jpg" data-lightbox="image"><img src="/gpower/assets/news-2-min.jpg" alt="Standard Post with Image"></a>
+										<a href="\storage\{{$singlenews->cover}}" data-lightbox="image"><img src="\storage\{{$singlenews->cover}}" alt="{{$singlenews->title}}"></a>
 									</div>
 									<div class="entry-title title-xs nott">
-										<h3><a href="#">Contribute to Mongolian energy development through</a></h3>
+										<h3><a href="/news/{{$singlenews->id}}">{{$singlenews->title}}</a></h3>
 									</div>
 									<div class="entry-meta">
-										<p class="page-title-right text-black-50 mb-0"><i class="icon-calendar3"></i> 12th December 2019</p>
+										<p class="page-title-right text-black-50 mb-0"><i class="icon-calendar3"></i>{!! $singlenews->publish_date !!}</p>
 
 									</div>
 									<div class="entry-content">
-										<p>Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</p>
+										<p>{{\Illuminate\Support\Str::limit(strip_tags($singlenews->content),100,'...')}}</p>
 									</div>
 								</div>
 							</div>
-
-							<div class="entry col-md-4 col-sm-6 col-12">
-								<div class="grid-inner">
-									<div class="entry-image">
-										<a href="/gpower/images/blog/full/1.jpg" data-lightbox="image"><img src="/gpower/assets/news-3-min.jpg" alt="Standard Post with Image"></a>
-									</div>
-									<div class="entry-title title-xs nott">
-										<h3><a href="#">G-Power LLC has a proven reputation and track record of working with clients</a></h3>
-									</div>
-									<div class="entry-meta">
-										<p class="page-title-right text-black-50 mb-0"><i class="icon-calendar3"></i> 15th July 2019</p>
-
-									</div>
-									<div class="entry-content">
-										<p>Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</p>
-									</div>
-								</div>
-							</div>
-
+							@endforeach
+							
 						</div>
 					</div>
 				</div>
@@ -321,7 +292,7 @@
 							<div class="col-md-8 offset-1">
 								<div class="before-heading">Don't Hesitate to Reach out to Us</div>
 									<h2 class="nott font-weight-semibold display-4">We are ready to solve your problem.</h2>
-								<h4 class="font-weight-light mb-4">Call us at <a href="tel:+(976)91114025">+(976) 9111-4025</a></h4>
+								<h4 class="font-weight-light mb-4">Call us at <a href="tel:+(976)91114025">{{ $contactInfo->phone }}</a></h4>
 								<a href="/contact" class="button button-rounded button-xlarge m-0 nott font-weight-semibold ls0 px-5">Contact Us</a>
 							</div>
 						</div>

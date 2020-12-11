@@ -83,59 +83,25 @@
 						<div class="section p-0 testimonials clearfix">
 							<div class="container" style="padding: 120px 0">
 								<div class="heading-block border-bottom-0 center">
-									<div class="before-heading">What our Members Say</div>
+									<div class="before-heading">What our Cleints Say</div>
 									<h2 class="nott font-weight-semibold">Testimonials</h2>
-									<p class="mb-0 mt-1"><span class="font-weight-semibold">Excellent, 9.6</span> out of 10 based on <span class="font-weight-semibold">2,118</span> reviews. </p>
+									
 								</div>
 
 								<div id="testimonials-carousel" class="owl-carousel carousel-widget testimonial testimonial-full bg-transparent border-0 shadow-none p-0 mx-auto text-left clearfix" data-animate-in="fadeIn" data-animate-out="fadeOut" data-margin="24" data-nav="false" data-pagi="true" data-items="1" style="max-width: 740px">
+									@foreach ($testimonials as $testimonial)
 									<div class="slide">
 										<div class="testi-content">
-											<div class="testi-stars mb-4">
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-											</div>
-											<p>Collaboratively enhance intermandated innovation via cutting-edge core competencies. Professionally extend covalent e-markets and mission-critical communities. Dramatically communicate revolutionary web services for interactive synergy. Synergistically.</p>
+											
+											<p>{!! $testimonial->content_eng !!}</p>
 											<div class="testi-meta mt-4">
-												Steve Jobs
-												<span class="ls0">Apple Inc.</span>
+												{{$testimonial->name_eng}}
+												<span class="ls0">{{$testimonial->company_eng}}</span>
 											</div>
 										</div>
 									</div>
-									<div class="slide">
-										<div class="testi-content">
-											<div class="testi-stars mb-4">
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-												<i class="icon-star-half2"></i>
-											</div>
-											<p>Intrinsicly synergize excellent content whereas user friendly action items. Rapidiously transition multimedia based information after top-line alignments. Authoritatively integrate accurate outsourcing vis-a-vis principle-centered systems energistically</p>
-											<div class="testi-meta mt-4">
-												Collis Ta'eed
-												<span class="ls0">Envato Inc.</span>
-											</div>
-										</div>
-									</div>
-									<div class="slide">
-										<div class="testi-content">
-											<div class="testi-stars mb-4">
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-												<i class="icon-star3"></i>
-											</div>
-											<p>Compellingly engage multimedia based niche markets via value-added manufactured products. Competently formulate goal-oriented content for installed base users. Uniquely leverage other's granular ROI without 24/365 collaboration and idea-sharing.</p>
-											<div class="testi-meta mt-4">
-												John Doe
-												<span class="ls0">XYZ Inc.</span>
-											</div>
-										</div>
-									</div>
+									@endforeach
+									
 								</div>
 							</div>
 
@@ -163,7 +129,7 @@
 					</div>
 				</div>
 				<div class="sidebar col-lg-2">
-					<div class="sidebar-widgets-wrap">
+					<div class="sidebar-widgets-wrap" style="margin-top: 80px;">
 
 						<div class="widget widget_links clearfix">
 

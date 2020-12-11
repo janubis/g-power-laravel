@@ -6,6 +6,10 @@ use Auth;
 
 use App\News;
 use App\Project;
+use App\General;
+use App\Team;
+use App\Testimonial;
+use App\Mapdata;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -32,37 +36,70 @@ class FrontController extends Controller
     public function index()
     {
         //return view('undercons');
-        return view('index');
+        $data['general'] = General::findOrFail(1);
+        $data['mapdata'] = Mapdata::orderBy('id','desc')->paginate(100);
+        $data['projects'] = Project::orderBy('id','desc')->paginate(100);
+        $data['news'] = News::orderBy('id','desc')->paginate(3);
+        $data['contactInfo'] = DB::table('contacts')->first();
+        
+        $summapdata = 0;
+        foreach ($data['mapdata'] as $eachdata) {
+            $summapdata = $summapdata + floatval($eachdata->capacity);
+        }
+
+        $sumproj = Project::count();
+        $sumpanel = 0;
+        $sumyield = 0;
+        $sumcapacity = 0;
+        foreach ($data['projects'] as $eachdata) {
+            $sumpanel = $sumpanel + floatval($eachdata->panel_count);
+            $sumyield = $sumyield + floatval($eachdata->yield_forecast);
+            $sumcapacity = $sumcapacity + floatval($eachdata->capacity);
+        }
+        $data['summapdata'] = $summapdata;
+        $data['sumproj'] = $sumproj;
+        $data['sumpanel'] = $sumpanel;
+        $data['sumyield'] = $sumyield;
+        $data['sumcapacity'] = $sumcapacity;
+
+        //dd($test);
+
+        return view('index', $data);
     }
     public function home()
     {
-        return view('index');
+        $data['general'] = General::findOrFail(1);
+        return view('index', $data);
     }
     public function mon()
     {
-        return view('undercons');
+        return view('undercons', $data);
     }
 
     public function teams()
     {
-        return view('teams');
+        $data['general'] = General::findOrFail(1);
+        $data['teams'] = Team::orderBy('id','desc')->paginate(10);
+        return view('teams', $data);
     }
 
     public function about()
     {
-
-        return view('about');
+        $data['testimonials'] = Testimonial::orderBy('id','desc')->paginate(5);
+        $data['general'] = General::findOrFail(1);
+        return view('about', $data);
     }
 
     public function contact()
     {
-        $contactInfo = DB::table('contacts')->first();
-        return view('contact')->with('contactInfo', $contactInfo);
+        $data['general'] = General::findOrFail(1);
+        $data['contactInfo'] = DB::table('contacts')->first();
+        return view('contact', $data);
     }
     public function saveContact(Request $request) { 
 
-        $contactInfo = DB::table('contacts')->first();
-
+        $data['contactInfo'] = DB::table('contacts')->first();
+        $data['general'] = General::findOrFail(1);
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
@@ -99,12 +136,14 @@ class FrontController extends Controller
 
     public function projects()
     {
-        $data['projects'] = Project::orderBy('id','desc')->paginate(100);;
+        $data['general'] = General::findOrFail(1);
+        $data['projects'] = Project::orderBy('id','desc')->paginate(100);
         return view('projects', $data);
     }
 
     public function singleProjects($key)
     {
+        $data['general'] = General::findOrFail(1);
         $data['currentproject'] = Project::findOrFail($key);
         $data['gallery']=json_decode($data['currentproject']->gallery);
         //$data['gallery'] = $data['currentproject']->items()->get();
@@ -113,13 +152,14 @@ class FrontController extends Controller
 
     public function news()
     {
+        $data['general'] = General::findOrFail(1);
         $data['news'] = News::orderBy('id','desc')->paginate(10);
         return view('news',$data);
     }
 
     public function singleNews($key)
     {
-        //return view('index');
+        $data['general'] = General::findOrFail(1);
         $data['currentnews'] = News::findOrFail($key);
         $data['othernews'] = News::orderBy('id','desc')->paginate(4);
         //dd($Post);
