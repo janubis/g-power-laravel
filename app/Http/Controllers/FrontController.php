@@ -44,7 +44,8 @@ class FrontController extends Controller
         $data['generalmn'] = General::findOrFail(2);
         $data['mapdata'] = Mapdata::orderBy('id','desc')->paginate(100);
         $data['projects'] = Project::orderBy('id','desc')->paginate(100);
-        $data['news'] = News::orderBy('id','desc')->paginate(3);
+        $data['news'] = News::where('language', '=', 'eng')->orderBy('id','desc')->paginate(3);
+        $data['newsmn'] = News::where('language', '=', 'mon')->orderBy('id','desc')->paginate(3);
         $data['contactInfo'] = DB::table('contacts')->first();
         
         $summapdata = 0;
