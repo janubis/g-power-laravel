@@ -62,7 +62,11 @@
 </head>
 
 <body class="stretched">
-
+	<?php
+	if(!isset($_COOKIE['language'])) {
+	    setcookie('language', 'end', time() + (86400 * 30), "/"); // 86400 = 1 day
+	}
+	?>
 	<!-- Document Wrapper
 	============================================= -->
 	<div id="wrapper" class="clearfix">
