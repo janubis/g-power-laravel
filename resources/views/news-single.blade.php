@@ -56,7 +56,12 @@
 										<!-- Post Single - Share
 										============================================= -->
 										<div class="si-share border-0 d-flex justify-content-between align-items-center">
-											<span>Share this Post:</span>
+											<?php if ($_COOKIE['language'] == 'mon'){?>
+												<span>Мэдээг хуваалцах:</span>
+											<?php } else { ?>
+												<span>Share this Post:</span>
+											<?php } ?>
+
 											<!-- Your share button code -->
 
 											<div>
@@ -69,32 +74,60 @@
 									</div>
 								</div><!-- .entry end -->
 
+								<?php if ($_COOKIE['language'] == 'mon'){?>
+									<h4>Холбоотой мэдээ:</h4>
+								<?php } else { ?>
+									<h4>Related Posts:</h4>
+								<?php } ?>
 								
-								<h4>Related Posts:</h4>
 
 								<div class="related-posts row posts-md col-mb-30">
-
-									@foreach ($othernews as $singlenews)
-									<div class="entry col-12 col-md-6">
-										<div class="grid-inner row align-items-center gutter-20">
-											<div class="col-4">
-												<div class="entry-image">
-													<a href="/news/{{$singlenews->id}}"><img src="\storage\{{$singlenews->cover}}" alt="Blog Single"></a>
+									<?php if ($_COOKIE['language'] == 'mon'){?>
+										@foreach ($othernewsmn as $singlenews)
+										<div class="entry col-12 col-md-6">
+											<div class="grid-inner row align-items-center gutter-20">
+												<div class="col-4">
+													<div class="entry-image">
+														<a href="/news/{{$singlenews->id}}"><img src="\storage\{{$singlenews->cover}}" alt="Blog Single"></a>
+													</div>
 												</div>
-											</div>
-											<div class="col-8">
-												<div class="entry-title title-xs">
-													<h3><a href="/news/{{$singlenews->id}}">{{$singlenews->title}}</a></h3>
-												</div>
-												<div class="entry-meta">
-													<ul>
-														<li><i class="icon-calendar3"></i>{!! $singlenews->publish_date !!}</li>
-													</ul>
+												<div class="col-8">
+													<div class="entry-title title-xs">
+														<h3><a href="/news/{{$singlenews->id}}">{{$singlenews->title}}</a></h3>
+													</div>
+													<div class="entry-meta">
+														<ul>
+															<li><i class="icon-calendar3"></i>{!! $singlenews->publish_date !!}</li>
+														</ul>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									@endforeach
+										@endforeach
+									<?php } else { ?>
+										@foreach ($othernews as $singlenews)
+										<div class="entry col-12 col-md-6">
+											<div class="grid-inner row align-items-center gutter-20">
+												<div class="col-4">
+													<div class="entry-image">
+														<a href="/news/{{$singlenews->id}}"><img src="\storage\{{$singlenews->cover}}" alt="Blog Single"></a>
+													</div>
+												</div>
+												<div class="col-8">
+													<div class="entry-title title-xs">
+														<h3><a href="/news/{{$singlenews->id}}">{{$singlenews->title}}</a></h3>
+													</div>
+													<div class="entry-meta">
+														<ul>
+															<li><i class="icon-calendar3"></i>{!! $singlenews->publish_date !!}</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										@endforeach
+									<?php } ?>
+									
 									
 								</div>
 							</div><!-- .postcontent end -->

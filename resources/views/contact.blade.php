@@ -32,45 +32,88 @@
 
 					<div class="row justify-content-around">
 						<div class="col-lg-5">
-							<h1 class="color mb-3">Contact Us</h1>
+							<?php if ($_COOKIE['language'] == 'mon'){?>
+								<h1 class="color mb-3">Холбоо барих</h1>
 
-							<p class="mb-5">{!! $contactInfo->desc !!}</p>
+								<p class="mb-5">{!! $contactInfo->desc_mn !!}</p>
 
-							<div class="clear"></div>
+								<div class="clear"></div>
 
-							<div class="feature-box fbox-sm mb-3">
-								<div class="fbox-icon">
-									<i class="bg-color-50 color icon-building2"></i>
+								<div class="feature-box fbox-sm mb-3">
+									<div class="fbox-icon">
+										<i class="bg-color-50 color icon-building2"></i>
+									</div>
+									<div class="fbox-content">
+										<p class="mb-2">
+											<span class="mb-2 h6 d-block text-dark">Хаяг:</span>
+											{{ $contactInfo->address_mn }}
+										</p>
+									</div>
 								</div>
-								<div class="fbox-content">
-									<p class="mb-2">
-										<span class="mb-2 h6 d-block text-dark">Address:</span>
-										{{ $contactInfo->address }}
-									</p>
+								<div class="feature-box fbox-sm mb-3">
+									<div class="fbox-icon">
+										<i class="bg-color-50 color icon-call"></i>
+									</div>
+									<div class="fbox-content">
+										<p class="mb-2">
+											<span class="mb-2 h6 d-block text-dark">Утас:</span>
+											{{ $contactInfo->phone }}
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="feature-box fbox-sm mb-3">
-								<div class="fbox-icon">
-									<i class="bg-color-50 color icon-call"></i>
+								<div class="feature-box fbox-sm mb-5">
+									<div class="fbox-icon">
+										<i class="bg-color-50 color icon-email3"></i>
+									</div>
+									<div class="fbox-content">
+										<p class="mb-2">
+											<span class="mb-2 h6 d-block text-dark">И-Мэйл:</span>
+											{{ $contactInfo->email }}
+										</p>
+									</div>
 								</div>
-								<div class="fbox-content">
-									<p class="mb-2">
-										<span class="mb-2 h6 d-block text-dark">Phone:</span>
-										{{ $contactInfo->phone }}
-									</p>
+							<?php } else { ?>
+								<h1 class="color mb-3">Contact Us</h1>
+
+								<p class="mb-5">{!! $contactInfo->desc !!}</p>
+
+								<div class="clear"></div>
+
+								<div class="feature-box fbox-sm mb-3">
+									<div class="fbox-icon">
+										<i class="bg-color-50 color icon-building2"></i>
+									</div>
+									<div class="fbox-content">
+										<p class="mb-2">
+											<span class="mb-2 h6 d-block text-dark">Address:</span>
+											{{ $contactInfo->address }}
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="feature-box fbox-sm mb-5">
-								<div class="fbox-icon">
-									<i class="bg-color-50 color icon-email3"></i>
+								<div class="feature-box fbox-sm mb-3">
+									<div class="fbox-icon">
+										<i class="bg-color-50 color icon-call"></i>
+									</div>
+									<div class="fbox-content">
+										<p class="mb-2">
+											<span class="mb-2 h6 d-block text-dark">Phone:</span>
+											{{ $contactInfo->phone }}
+										</p>
+									</div>
 								</div>
-								<div class="fbox-content">
-									<p class="mb-2">
-										<span class="mb-2 h6 d-block text-dark">Email:</span>
-										{{ $contactInfo->email }}
-									</p>
+								<div class="feature-box fbox-sm mb-5">
+									<div class="fbox-icon">
+										<i class="bg-color-50 color icon-email3"></i>
+									</div>
+									<div class="fbox-content">
+										<p class="mb-2">
+											<span class="mb-2 h6 d-block text-dark">Email:</span>
+											{{ $contactInfo->email }}
+										</p>
+									</div>
 								</div>
-							</div>
+							<?php } ?>
+							
 
 						</div>
 

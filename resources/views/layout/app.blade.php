@@ -16,13 +16,15 @@
 	<link rel="stylesheet" href="/gpower/css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="/gpower/css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="/gpower/css/custom.css" type="text/css" />
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Workspace Demo Specific Stylesheet -->
 	<link rel="stylesheet" href="/gpower/css/colors.php?color=198E0E" type="text/css" /> <!-- Theme Color -->
 	<link rel="stylesheet" href="/gpower/demos/gpower/css/fonts.css" type="text/css" /> <!-- Theme Font -->
 	<link rel="stylesheet" href="/gpower/demos/gpower/gpower.css" type="text/css" /> <!-- Theme CSS -->
+
+	<link rel="stylesheet" href="/gpower/css/custom.css" type="text/css" />
 	<!-- / -->
 	<!-- FAVICON -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/gpower/assets/favicon/apple-icon-57x57.png">
@@ -78,17 +80,21 @@
 							<a href="/" class="standard-logo" data-sticky-logo="\storage\{{$general->header_logo}}"><img src="\storage\{{$general->header_logo}}" alt="G-Power Logo"></a>
 							<a href="/" class="retina-logo" data-sticky-logo="\storage\{{$general->header_logo}}"><img src="\storage\{{$general->header_logo}}" alt="G-Power Logo"></a>
 						</div><!-- #logo end -->
-
+						
 						<div class="header-misc top-links">
 							<ul class="top-links-container language-changer">
-								<li class="top-links-item"><a href="#"><img src="/gpower/demos/gpower/flags/eng.png" alt="Lang">Eng</a>
+								<li class="top-links-item"><a href="#"><?php if ($_COOKIE['language'] == 'mon'){ ?>
+							<img src="/gpower/demos/gpower/flags/mon.png" alt="Lang">Mn</a>
+						<?php } else { ?>
+							<img src="/gpower/demos/gpower/flags/eng.png" alt="Lang">Eng</a>
+						<?php } ?>
 									<ul class="top-links-sub-menu">
-										<li class="top-links-item"><a href="/"><img src="/gpower/demos/gpower/flags/eng.png" alt="Lang">English</a></li>
-										<li class="top-links-item"><a href=/mn><img src="/gpower/demos/gpower/flags/mon.png" alt="Lang">Mongolian</a></li>
+										<li class="top-links-item"><a href="#" onclick="setCookie('language', 'eng', 30)"><img src="/gpower/demos/gpower/flags/eng.png" alt="Lang">English</a></li>
+										<li class="top-links-item"><a href="#" onclick="setCookie('language', 'mon', 30)"><img src="/gpower/demos/gpower/flags/mon.png" alt="Lang">Монгол</a></li>
 									</ul>
 								</li>
 							</ul>
-							<a class="top-phone" href="http://119.40.99.111"><i class="icon-solar-panel"></i> <span class="d-none d-md-inline-block">{{$general->menu_dashboard}}</span></a>
+							<a class="top-phone" href="http://119.40.99.111"><i class="icon-solar-panel"></i> <span class="d-none d-md-inline-block"><?php if ($_COOKIE['language'] == 'mon'){ ?>{{$generalmn->menu_dashboard}}<?php } else { ?>{{$general->menu_dashboard}}<?php } ?></span></a>
 						</div>
 
 						<div id="primary-menu-trigger">
@@ -100,10 +106,10 @@
 						<nav class="primary-menu">
 
 							<ul class="menu-container">
-								<li class="menu-item"><a class="menu-link" href="/about/info"><div>{{$general->menu_about}}</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/projects"><div>{{$general->menu_projects}}</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/news"><div>{{$general->menu_news}}</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/contact"><div>{{$general->menu_contact}}</div></a></li> 
+								<li class="menu-item"><a class="menu-link" href="/about/info"><div><?php if ($_COOKIE['language'] == 'mon'){ ?>{{$generalmn->menu_about}}<?php } else { ?>{{$general->menu_about}}<?php } ?></div></a></li>
+								<li class="menu-item"><a class="menu-link" href="/projects"><div><?php if ($_COOKIE['language'] == 'mon'){ ?>{{$generalmn->menu_projects}}<?php } else { ?>{{$general->menu_projects}}<?php } ?></div></a></li>
+								<li class="menu-item"><a class="menu-link" href="/news"><div><?php if ($_COOKIE['language'] == 'mon'){ ?>{{$generalmn->menu_news}}<?php } else { ?>{{$general->menu_news}}<?php } ?></div></a></li>
+								<li class="menu-item"><a class="menu-link" href="/contact"><div><?php if ($_COOKIE['language'] == 'mon'){ ?>{{$generalmn->menu_contact}}<?php } else { ?>{{$general->menu_contact}}<?php } ?></div></a></li> 
 							</ul>
 
 						</nav><!-- #primary-menu end -->
@@ -151,7 +157,7 @@
 								
 							</div>
 							<div class="col-sm-9">
-								{!! $general->footer_description !!}
+								<?php if ($_COOKIE['language'] == 'mon'){?>{!! $generalmn->footer_description !!}<?php } else { ?>{!! $general->footer_description !!}<?php } ?>
 							</div>
 						</div>
 
@@ -172,7 +178,7 @@
 					<div class="row">
 						<div class="col-8">
 
-							<p class="mb-2 text-white-50">{!! $general->copyright !!}</p>
+							<p class="mb-2 text-white-50"><?php if ($_COOKIE['language'] == 'mon'){?>{!! $generalmn->copyright !!}<?php } else { ?>{!! $general->copyright !!}<?php } ?></p>
 							<!-- <div class="copyright-links text-white-50">
 								<a href="#" class="text-white-50">Terms of Use</a> / <a href="#" class="text-white-50">Privacy Policy</a>
 							</div> -->
@@ -202,6 +208,20 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="/gpower/js/functions.js"></script>
+	<script>
+		function setCookie(cname, cvalue, exdays) {
+	        var d = new Date();
+	        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	        var expires = "expires="+d.toUTCString();
+	        document.cookie = cname + "=" + cvalue + "; " + expires;
+	        location.reload();
+	    }
+
+		function showCookie(){
+		    //document.write(document.cookie);
+		    alert(document.cookie);
+		}
+	</script>
 	@section('pagejavascript')
     @show
 </body>

@@ -10,7 +10,9 @@
 		<section id="page-title">
 
 			<div class="container clearfix">
-				<h1>{{$currentproject->title}}</h1>
+				<h1><?php if ($_COOKIE['language'] == 'mon'){?>{{$currentproject->title_mon}}
+				<?php } else { ?>{{$currentproject->title}}
+				<?php } ?></h1>
 				<div id="portfolio-navigation">
 					<a href="/projects/{{$currentproject->id-1}}"><i class="icon-angle-left"></i></a>
 					<a href="/projects"><i class="icon-line-grid"></i></a>
@@ -41,10 +43,18 @@
 							<div class="card event-meta">
 								<div class="card-body">
 									<ul class="portfolio-meta mb-0">
-										<li><span><i class="icon-solar-panel"></i>Panel Count:</span> {{$currentproject->panel_count}}</li>
-										<li><span><i class="icon-calendar3"></i>Delivered Date:</span> {{$currentproject->delivered_date}}</li>
-										<li><span><i class="icon-lightbulb"></i>Capacity:</span>{{$currentproject->capacity}}</li>
-										<li><span><i class="icon-line-sun"></i>Yield Forecast:</span> {{$currentproject->yield_forecast}}</li>
+										<?php if ($_COOKIE['language'] == 'mon'){?>
+											<li><span><i class="icon-solar-panel"></i>Панелууд:</span> {{$currentproject->panel_count}}</li>
+											<li><span><i class="icon-calendar3"></i>Хүлээлгэн өгсөн өдөр:</span> {{$currentproject->delivered_date}}</li>
+											<li><span><i class="icon-lightbulb"></i>Суурилуулсан хүчин чадал:</span>{{$currentproject->capacity}}</li>
+											<li><span><i class="icon-line-sun"></i>Үйлдвэрлэсэн kWh:</span> {{$currentproject->yield_forecast}}</li>
+										<?php } else { ?>
+											<li><span><i class="icon-solar-panel"></i>Panel Count:</span> {{$currentproject->panel_count}}</li>
+											<li><span><i class="icon-calendar3"></i>Delivered Date:</span> {{$currentproject->delivered_date}}</li>
+											<li><span><i class="icon-lightbulb"></i>Capacity:</span>{{$currentproject->capacity}}</li>
+											<li><span><i class="icon-line-sun"></i>Yield Forecast:</span> {{$currentproject->yield_forecast}}</li>
+										<?php } ?>
+										
 									</ul>
 								</div>
 							</div>
@@ -53,7 +63,11 @@
 							<!-- Portfolio Single - Share
 							============================================= -->
 							<div class="si-share border-0 d-flex justify-content-between align-items-center mt-4">
-									<span>Share:</span>
+									<?php if ($_COOKIE['language'] == 'mon'){?>
+										<span>Түгээх:</span>
+									<?php } else { ?>
+										<span>Share:</span>
+									<?php } ?>
 								<div>
 									<a class="fb-share-button mb-1" data-href="http://g-power.mn/projects/{{$currentproject->id}}" data-layout="button_count"></a>
 									<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{$currentproject->title}}">Tweet</a>
@@ -69,12 +83,22 @@
 							<!-- Portfolio Single - Description
 							============================================= -->
 							<div class="fancy-title title-border">
-								<h2>Project Info:</h2>
+								<?php if ($_COOKIE['language'] == 'mon'){?>
+									<h2>Төслийн тухай:</h2>
+								<?php } else { ?>
+									<h2>Project Info:</h2>
+								<?php } ?>
+
 							</div>
 
 							<div class="row col-mb-30">
 								<div class="col-sm-12 col-md-12 col-lg-12">
-									{!! $currentproject->description !!}
+									<?php if ($_COOKIE['language'] == 'mon'){?>
+										{!! $currentproject->description_mon !!}
+									<?php } else { ?>
+										{!! $currentproject->description !!}
+									<?php } ?>
+									
 								</div>
 
 								

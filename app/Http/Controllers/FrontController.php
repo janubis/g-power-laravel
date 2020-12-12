@@ -13,6 +13,7 @@ use App\Mapdata;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
@@ -36,7 +37,11 @@ class FrontController extends Controller
     public function index()
     {
         //return view('undercons');
+        $data['cookielanguage'] = Cookie::get('language');
+        //dd(Cookie::get('language'));
+        //$data['cookielanguage'] = $request->cookie('language');
         $data['general'] = General::findOrFail(1);
+        $data['generalmn'] = General::findOrFail(2);
         $data['mapdata'] = Mapdata::orderBy('id','desc')->paginate(100);
         $data['projects'] = Project::orderBy('id','desc')->paginate(100);
         $data['news'] = News::orderBy('id','desc')->paginate(3);
@@ -66,19 +71,11 @@ class FrontController extends Controller
 
         return view('index', $data);
     }
-    public function home()
-    {
-        $data['general'] = General::findOrFail(1);
-        return view('index', $data);
-    }
-    public function mon()
-    {
-        return view('undercons', $data);
-    }
-
+    
     public function teams()
     {
         $data['general'] = General::findOrFail(1);
+        $data['generalmn'] = General::findOrFail(2);
         $data['teams'] = Team::orderBy('id','desc')->paginate(10);
         return view('teams', $data);
     }
@@ -87,19 +84,21 @@ class FrontController extends Controller
     {
         $data['testimonials'] = Testimonial::orderBy('id','desc')->paginate(5);
         $data['general'] = General::findOrFail(1);
+        $data['generalmn'] = General::findOrFail(2);
         return view('about', $data);
     }
 
     public function contact()
     {
         $data['general'] = General::findOrFail(1);
+        $data['generalmn'] = General::findOrFail(2);
         $data['contactInfo'] = DB::table('contacts')->first();
         return view('contact', $data);
     }
     public function saveContact(Request $request) { 
-
-        $data['contactInfo'] = DB::table('contacts')->first();
         $data['general'] = General::findOrFail(1);
+        $data['generalmn'] = General::findOrFail(2);
+        $data['contactInfo'] = DB::table('contacts')->first();
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
@@ -107,17 +106,7 @@ class FrontController extends Controller
             'message' => 'required'
         ]);
 
-        $contact = new ContactInformation;
-
-        $contact->name = $request->name;
-        $contact->email = $request->email;
-        $contact->subject = 'contact form fill from website';
-        $contact->phone_number = $request->phone_number;
-        $contact->message = $request->message;
-
-        $contact->save();
-
-        /* \Mail::send('contact_email',
+        \Mail::send('contact_email',
         array(
             'name' => $request->get('name'),
             'email' => $request->get('email'),
@@ -127,16 +116,17 @@ class FrontController extends Controller
         ), function($message) use ($request)
             {
                $message->from($request->email);
-               $message->to('r.javkhlan@gmail.com');
+               $message->to('contact@g-power.mn');
             });
-        */
-        return view('contact')->with('contactInfo', $contactInfo);
+        
+        return view('contact', $data);
 
     }
 
     public function projects()
     {
         $data['general'] = General::findOrFail(1);
+        $data['generalmn'] = General::findOrFail(2);
         $data['projects'] = Project::orderBy('id','desc')->paginate(100);
         return view('projects', $data);
     }
@@ -144,6 +134,7 @@ class FrontController extends Controller
     public function singleProjects($key)
     {
         $data['general'] = General::findOrFail(1);
+        $data['generalmn'] = General::findOrFail(2);
         $data['currentproject'] = Project::findOrFail($key);
         $data['gallery']=json_decode($data['currentproject']->gallery);
         //$data['gallery'] = $data['currentproject']->items()->get();
@@ -153,15 +144,19 @@ class FrontController extends Controller
     public function news()
     {
         $data['general'] = General::findOrFail(1);
-        $data['news'] = News::orderBy('id','desc')->paginate(10);
+        $data['generalmn'] = General::findOrFail(2);
+        $data['news'] = News::where('language', '=', 'eng')->orderBy('id','desc')->paginate(10);
+        $data['newsmn'] = News::where('language', '=', 'mon')->orderBy('id','desc')->paginate(10);
         return view('news',$data);
     }
 
     public function singleNews($key)
     {
         $data['general'] = General::findOrFail(1);
+        $data['generalmn'] = General::findOrFail(2);
         $data['currentnews'] = News::findOrFail($key);
-        $data['othernews'] = News::orderBy('id','desc')->paginate(4);
+        $data['othernews'] = News::where('language', '=', 'eng')->orderBy('id','desc')->paginate(4);
+        $data['othernewsmn'] = News::where('language', '=', 'mon')->orderBy('id','desc')->paginate(4);
         //dd($Post);
         return view('news-single', $data);
     }
