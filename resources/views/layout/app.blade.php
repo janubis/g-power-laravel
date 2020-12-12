@@ -62,7 +62,11 @@
 </head>
 
 <body class="stretched">
-	
+	<?php
+	if(!isset($_COOKIE['language'])) {
+	    setcookie('language', 'eng', 30);
+	}
+	?>
 	<!-- Document Wrapper
 	============================================= -->
 	<div id="wrapper" class="clearfix">
