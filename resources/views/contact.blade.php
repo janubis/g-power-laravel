@@ -5,7 +5,12 @@
 @endsection
 
 @section('content')
-		    
+		    <?php
+	if(!isset($_COOKIE['language'])) {
+	    setcookie('language', 'eng', 30);
+	    $_COOKIE['language'] = 'eng';
+	}
+	?>
 		<!-- Slider / Hero
 		============================================= -->
 		<div id="slider" class="slider-element dark py-0" style="background-size: cover; background-image: url('/storage/{!! $contactInfo->cover !!}'); background-position: center center; background-repeat: no-repeat;">

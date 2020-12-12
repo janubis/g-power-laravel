@@ -376,12 +376,21 @@
 							<?php } ?>
 							
 						</div>
-
-						<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
-						@foreach ($mapdata as $singlepin)
-						{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->project_eng}}</span></h4><p><strong>Location:</strong> {{$singlepin->location_eng}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
-						@endforeach
-						]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
+						<?php if ($_COOKIE['language'] == 'mon'){?>
+							<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
+							@foreach ($projects as $singlepin)
+							{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title_mon}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company_mon}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
+							@endforeach
+							]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
+						<?php } else { ?>
+							<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
+							@foreach ($projects as $singlepin)
+							{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
+							@endforeach
+							]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
+						<?php } ?>
+						
+						
 					</div>
 				</div>
 

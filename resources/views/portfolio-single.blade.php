@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+<?php
+	if(!isset($_COOKIE['language'])) {
+	    setcookie('language', 'eng', 30);
+	    $_COOKIE['language'] = 'eng';
+	}
+	?>
 		<!-- Page Title
 		============================================= -->
 		<section id="page-title">

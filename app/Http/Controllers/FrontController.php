@@ -49,18 +49,18 @@ class FrontController extends Controller
         $data['contactInfo'] = DB::table('contacts')->first();
         
         $summapdata = 0;
-        foreach ($data['mapdata'] as $eachdata) {
-            $summapdata = $summapdata + floatval($eachdata->capacity);
+        foreach ($data['projects'] as $eachdata1) {
+            $summapdata = $summapdata + floatval($eachdata1->capacity);
         }
 
         $sumproj = Project::count();
         $sumpanel = 0;
         $sumyield = 0;
         $sumcapacity = 0;
-        foreach ($data['projects'] as $eachdata) {
-            $sumpanel = $sumpanel + floatval($eachdata->panel_count);
-            $sumyield = $sumyield + floatval($eachdata->yield_forecast);
-            $sumcapacity = $sumcapacity + floatval($eachdata->capacity);
+        foreach ($data['projects'] as $eachdata2) {
+            $sumpanel = $sumpanel + floatval($eachdata2->panel_count);
+            $sumyield = $sumyield + floatval($eachdata2->yield_forecast);
+            $sumcapacity = $sumcapacity + floatval($eachdata2->capacity);
         }
         $data['summapdata'] = $summapdata;
         $data['sumproj'] = $sumproj;

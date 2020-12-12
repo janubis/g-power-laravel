@@ -6,7 +6,12 @@
 
 @section('content')
 
-		
+		<?php
+	if(!isset($_COOKIE['language'])) {
+	    setcookie('language', 'eng', 30);
+	    $_COOKIE['language'] = 'eng';
+	}
+	?>
 		<!-- Content
 		============================================= -->
 		<section id="content">
