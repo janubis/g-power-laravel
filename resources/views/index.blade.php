@@ -5,7 +5,11 @@
 @endsection
 
 @section('content')
-
+	<?php
+	if(!isset($_COOKIE['language'])) {
+	    setcookie('language', 'end', time() + (86400 * 30), "/"); // 86400 = 1 day
+	}
+	?>
 		<!-- Content
 		============================================= -->
 		<section id="content">
