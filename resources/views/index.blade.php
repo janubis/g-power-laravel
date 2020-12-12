@@ -367,11 +367,11 @@
 						<div class="heading-block border-bottom-0 center">
 							<?php if ($_COOKIE['language'] == 'mon'){?>
 								<div class="before-heading">Суурилуулсан нарны цахилгаан станцын  хүч</div>
-								<h2 class="nott font-weight-semibold"> {{$summapdata}} МW</h2>
+								<h2 class="nott font-weight-semibold"> {{$summapdata}} kWh</h2>
 								<p class="mb-0 mt-1"><span class="font-weight-semibold">Хэрэгжүүлсэн төслүүд</span></p>
 							<?php } else { ?>
 								<div class="before-heading">installed power of built solar power station</div>
-								<h2 class="nott font-weight-semibold"> {{$summapdata}} МW</h2>
+								<h2 class="nott font-weight-semibold"> {{$summapdata}} kWh</h2>
 								<p class="mb-0 mt-1"><span class="font-weight-semibold">Implemented projects</span></p>
 							<?php } ?>
 							
