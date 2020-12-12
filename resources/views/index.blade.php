@@ -7,7 +7,7 @@
 @section('content')
 	<?php
 	if(!isset($_COOKIE['language'])) {
-	    setcookie('language', 'end', time() + (86400 * 30), "/"); // 86400 = 1 day
+	    setcookie('language', 'eng', 30);
 	}
 	?>
 		<!-- Content
