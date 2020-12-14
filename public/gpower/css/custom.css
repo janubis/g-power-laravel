@@ -54,3 +54,10 @@ h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > s
     text-transform: uppercase;
     font-weight: 500;
 }
+.map-cover-section {
+    height: 580px;
+    position: absolute;
+    width: 100%;
+    top: 300px;
+    display: block;
+}

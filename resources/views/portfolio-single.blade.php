@@ -58,7 +58,7 @@
 											<li><span><i class="icon-solar-panel"></i>Panel Count:</span> {{$currentproject->panel_count}}</li>
 											<li><span><i class="icon-calendar3"></i>Delivered Date:</span> {{$currentproject->delivered_date}}</li>
 											<li><span><i class="icon-lightbulb"></i>Capacity:</span>{{$currentproject->capacity}}</li>
-											<li><span><i class="icon-line-sun"></i>Yield Forecast:</span> {{$currentproject->yield_forecast}}</li>
+											<li><span><i class="icon-line-sun"></i>Yield Forecast Per Year mWh:</span> {{$currentproject->yield_forecast}}</li>
 										<?php } ?>
 										
 									</ul>

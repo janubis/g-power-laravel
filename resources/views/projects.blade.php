@@ -64,7 +64,7 @@
 											</div>
 											<div class="col-4">
 												<h2>{{$singleproject->yield_forecast}}</h2>
-												<p>Үйлдвэрлэсэн kWh</p>
+												<p>Жилд үйлдвэрлэхээр төлөвлөсөн mWh</p>
 											</div>
 
 										</div>
@@ -104,7 +104,7 @@
 													</div>
 													<div class="col-4">
 														<h2>{{$singleproject->yield_forecast}}</h2>
-														<p>Yield Forecast.kWh</p>
+														<p>Yield Forecast Per Year.mWh</p>
 													</div>
 
 												</div>
@@ -149,12 +149,12 @@
 								<?php if ($_COOKIE['language'] == 'mon'){?>
 									<div class="before-heading">Та хэзээд бидэнтэй холбогдох боломжтой</div>
 									<h2 class="nott font-weight-semibold display-4">Бид таны асуудлыг шийдэхэд бэлэн.</h2>
-									<h4 class="font-weight-light mb-4">Утас <a href="tel:+(976)91114025">+(976) 9111-4025</a></h4>
+									<h4 class="font-weight-light mb-4">Утас <a href="tel:+(976)91114025">+(976) – 7741-4025</a></h4>
 									<a href="/contact" class="button button-rounded button-xlarge m-0 nott font-weight-semibold ls0 px-5">Холбоо барих</a>
 								<?php } else { ?>
 									<div class="before-heading">Don't Hesitate to Reach out to Us</div>
 									<h2 class="nott font-weight-semibold display-4">We are ready to solve your problem.</h2>
-									<h4 class="font-weight-light mb-4">Call us at <a href="tel:+(976)91114025">+(976) 9111-4025</a></h4>
+									<h4 class="font-weight-light mb-4">Call us at <a href="tel:+(976)91114025">+(976) – 7741-4025</a></h4>
 									<a href="/contact" class="button button-rounded button-xlarge m-0 nott font-weight-semibold ls0 px-5">Contact Us</a>
 								<?php } ?>
 							</div>

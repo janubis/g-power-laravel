@@ -376,21 +376,22 @@
 							<?php } ?>
 							
 						</div>
-						<?php if ($_COOKIE['language'] == 'mon'){?>
-							<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
-							@foreach ($projects as $singlepin)
-							{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title_mon}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company_mon}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
-							@endforeach
-							]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
-						<?php } else { ?>
-							<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
-							@foreach ($projects as $singlepin)
-							{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
-							@endforeach
-							]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
-						<?php } ?>
-						
-						
+						<div class="my-google-map-container">
+							<?php if ($_COOKIE['language'] == 'mon'){?>
+								<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
+								@foreach ($projects as $singlepin)
+								{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title_mon}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company_mon}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
+								@endforeach
+								]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
+							<?php } else { ?>
+								<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
+								@foreach ($projects as $singlepin)
+								{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
+								@endforeach
+								]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
+							<?php } ?>
+								<div class="map-cover-section"></div>
+						</div>
 					</div>
 				</div>
 
@@ -464,12 +465,12 @@
 								<?php if ($_COOKIE['language'] == 'mon'){?>
 									<div class="before-heading">Та хэзээд бидэнтэй холбогдох боломжтой</div>
 									<h2 class="nott font-weight-semibold display-4">Бид таны асуудлыг шийдэхэд бэлэн.</h2>
-									<h4 class="font-weight-light mb-4">Утас <a href="tel:+(976)91114025">+(976) 9111-4025</a></h4>
+									<h4 class="font-weight-light mb-4">Утас <a href="tel:+(976)91114025">+(976) – 7741-4025</a></h4>
 									<a href="/contact" class="button button-rounded button-xlarge m-0 nott font-weight-semibold ls0 px-5">Холбоо барих</a>
 								<?php } else { ?>
 									<div class="before-heading">Don't Hesitate to Reach out to Us</div>
 									<h2 class="nott font-weight-semibold display-4">We are ready to solve your problem.</h2>
-									<h4 class="font-weight-light mb-4">Call us at <a href="tel:+(976)91114025">+(976) 9111-4025</a></h4>
+									<h4 class="font-weight-light mb-4">Call us at <a href="tel:+(976)91114025">+(976) – 7741-4025</a></h4>
 									<a href="/contact" class="button button-rounded button-xlarge m-0 nott font-weight-semibold ls0 px-5">Contact Us</a>
 								<?php } ?>
 							</div>
@@ -484,4 +485,10 @@
     @parent
     
 	<script src="https://maps.google.com/maps/api/js?key={{env('GOOGLE_KEY')}}"></script>
+	<script>
+		$(".map-cover-section").on("tap click",function(){
+			console.log('hes clicked');
+		  $(this).hide();
+		});
+	</script>
 @endsection
