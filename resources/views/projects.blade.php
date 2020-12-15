@@ -55,16 +55,16 @@
 										<p>{{$singleproject->ordering_company_mon}}</p>
 										<div class="row">
 											<div class="col-4">
-												<h2>{{$singleproject->capacity}}</h2>
+												<h2>{{$singleproject->capacity}} kW</h2>
 												<p>Суурилуулсан хүчин чадал</p>
 											</div>
 											<div class="col-4">
 												<h2>{{$singleproject->panel_count}}</h2>
-												<p>Панелууд</p>
+												<p>Жи Пауер-ын оролцоо </p>
 											</div>
 											<div class="col-4">
-												<h2>{{$singleproject->yield_forecast}}</h2>
-												<p>Жилд үйлдвэрлэхээр төлөвлөсөн mWh</p>
+												<h2>{{$singleproject->yield_forecast}} MWh</h2>
+												<p>Жилд үйлдвэрлэхээр төлөвлөсөн </p>
 											</div>
 
 										</div>
@@ -95,16 +95,16 @@
 											<?php if ($_COOKIE['language'] == 'mon'){?>
 												<div class="row">
 													<div class="col-4">
-														<h2>{{$singleproject->capacity}}</h2>
+														<h2>{{$singleproject->capacity}} kW</h2>
 														<p>Installed Capacity</p>
 													</div>
 													<div class="col-4">
 														<h2>{{$singleproject->panel_count}}</h2>
-														<p>Panel Count</p>
+														<p>G-Power Role</p>
 													</div>
 													<div class="col-4">
-														<h2>{{$singleproject->yield_forecast}}</h2>
-														<p>Yield Forecast Per Year.mWh</p>
+														<h2>{{$singleproject->yield_forecast}} MWh</h2>
+														<p>Yield Forecast Per Year</p>
 													</div>
 
 												</div>
@@ -116,11 +116,11 @@
 													</div>
 													<div class="col-4">
 														<h2>{{$singleproject->panel_count}}</h2>
-														<p>Panel Count</p>
+														<p>G-Power Role</p>
 													</div>
 													<div class="col-4">
-														<h2>{{$singleproject->yield_forecast}}</h2>
-														<p>Yield Forecast.kWh</p>
+														<h2>{{$singleproject->yield_forecast}} MWh</h2>
+														<p>Yield Forecast</p>
 													</div>
 
 												</div>

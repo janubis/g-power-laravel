@@ -34,7 +34,7 @@
 							<?php } else { ?>
 								<div class="col-md-7">
 									<h2 class="display-4 font-weight-semibold ls--2">We are making  <br><span class="text-rotater" data-separator="|" data-rotate="fadeIn" data-speed="2000">
-										<span class="t-rotate">Green|Renewal|Solar</span>
+										<span class="t-rotate">Green|Renewable|Solar</span>
 									</span>energy.</h2>
 								</div>
 								<div class="col-md-5">
@@ -155,23 +155,23 @@
 										</div>
 										<div class="row">
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="6" data-refresh-interval="2" data-speed="600"></span>+</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumproj}}" data-refresh-interval="2" data-speed="600"></span>+</div>
 												<h5 class="mt-0 font-weight-medium">Төслүүд</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="370" data-refresh-interval="11" data-speed="900"></span>MW</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kW</div>
 												<h5 class="mt-0 font-weight-medium">Суурилуулсан хүчин чадал</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="210" data-refresh-interval="3" data-speed="1000"></span>+</div>
-												<h5 class="mt-0 font-weight-medium">Панелууд</h5>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>+</div>
+												<h5 class="mt-0 font-weight-medium">Үйлдвэрлэж буй чадал</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="100" data-to="4500" data-refresh-interval="100" data-speed="1500"></span>kWh</div>
-												<h5 class="mt-0 font-weight-medium">Үйлдвэрлэсэн kWh</h5>
+												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MWh</div>
+												<h5 class="mt-0 font-weight-medium">Жилд үйлдвэрлэх боломжит эрчим хүч</h5>
 											</div>
 										</div>
 										<p class="text-muted">Бид сүлжээний болон гадна сүлжээний PV систем, үйлдвэрүүдийн инженерийн, хангамж, барилга угсралт, ашиглалт, засвар үйлчилгээний үйлчилгээг санал болгодог.</p>
@@ -182,23 +182,23 @@
 										</div>
 										<div class="row">
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="6" data-refresh-interval="2" data-speed="600"></span>+</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumproj}}" data-refresh-interval="2" data-speed="600"></span>+</div>
 												<h5 class="mt-0 font-weight-medium">Projects</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="370" data-refresh-interval="11" data-speed="900"></span>MW</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kWh</div>
 												<h5 class="mt-0 font-weight-medium">Installed Capacity</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="210" data-refresh-interval="3" data-speed="1000"></span>+</div>
-												<h5 class="mt-0 font-weight-medium">Panels</h5>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>+</div>
+												<h5 class="mt-0 font-weight-medium">Current Power</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="100" data-to="4500" data-refresh-interval="100" data-speed="1500"></span>kWh</div>
-												<h5 class="mt-0 font-weight-medium">Generated kWh</h5>
+												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MWh</div>
+												<h5 class="mt-0 font-weight-medium">Yield Forecast Power</h5>
 											</div>
 										</div>
 										<p class="text-muted">We offer engineering, procurement, construction, commissioning, operation and maintenance services for on- and off-grid PV systems and plants of any scale.</p>
@@ -380,13 +380,13 @@
 							<?php if ($_COOKIE['language'] == 'mon'){?>
 								<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
 								@foreach ($projects as $singlepin)
-								{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title_mon}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company_mon}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
+								{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title_mon}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company_mon}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}} kWh<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
 								@endforeach
 								]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
 							<?php } else { ?>
 								<div id="google-map4" style="height: 580px; margin-bottom: 20px;" class="gmap" data-maptype="TERRAIN" data-address="47.923287, 106.917476" data-zoom="14" data-markers='[
 								@foreach ($projects as $singlepin)
-								{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}}<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
+								{address: "{{$singlepin->coordinate_lat}}, {{$singlepin->coordinate_long}}",html: "<h4><span>{{$singlepin->title}}</span></h4><p><strong>Ordering Company:</strong> {{$singlepin->ordering_company}}<br><strong>Installed capacity:</strong> {{$singlepin->capacity}} kWh<br><strong>Year of comissioning:</strong> {{$singlepin->delivered_date}}</p>"},
 								@endforeach
 								]' data-icon='{image: "/gpower/assets/map-pin.png",iconsize: [32, 32],iconanchor: [14,44]}'></div>
 							<?php } ?>
@@ -486,7 +486,7 @@
     
 	<script src="https://maps.google.com/maps/api/js?key={{env('GOOGLE_KEY')}}"></script>
 	<script>
-		$(".map-cover-section").on("tap click",function(){
+		$(".map-cover-section").on("click",function(){
 			console.log('hes clicked');
 		  $(this).hide();
 		});
