@@ -9,7 +9,6 @@ use App\Project;
 use App\General;
 use App\Team;
 use App\Testimonial;
-use App\Mapdata;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -42,7 +41,6 @@ class FrontController extends Controller
         //$data['cookielanguage'] = $request->cookie('language');
         $data['general'] = General::findOrFail(1);
         $data['generalmn'] = General::findOrFail(2);
-        $data['mapdata'] = Mapdata::orderBy('id','desc')->paginate(100);
         $data['projects'] = Project::orderBy('id','desc')->paginate(100);
         $data['news'] = News::where('language', '=', 'eng')->orderBy('id','desc')->paginate(3);
         $data['newsmn'] = News::where('language', '=', 'mon')->orderBy('id','desc')->paginate(3);
