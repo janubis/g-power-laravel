@@ -61,3 +61,31 @@ h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > s
     top: 300px;
     display: block;
 }
+.bg-overlay-bg.dark {
+    background-color: rgb(25 142 14 / 50%);
+}
+.project-custom-sun .text-dark {
+    color: #ffc300 !important;
+}
+
+.project-custom-sun .bg-light {
+    background-color: #ffffff !important;
+}
+.portfolio-desc span {
+    display: contents;
+    color: #198e0e;
+    font-weight: 700;
+}
+#content .portfolio-desc  p {
+    line-height: 0;
+}
+.portfolio-desc {
+    position: relative;
+    z-index: 6;
+    padding: 30px 25px 10px 25px;
+    
+}
+.portfolio-item .grid-inner {
+	border: 1px solid #d2d2d2;
+    box-shadow: 0 0 1rem #d2d2d2;
+}

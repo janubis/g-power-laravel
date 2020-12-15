@@ -28,7 +28,7 @@
 								</div>
 								<div class="col-md-5">
 									<p class="lead text-muted">
-										Өндөр технологи, суурилуулалт, барилгын ажлыг дэлхийн стандартад нийцсэн, маш сайн зөвлөх үйлчилгээнд нутагшуулах замаар Монголын эрчим хүчний хөгжилд хувь нэмэр оруулах.
+										Өндөр технологийн нутагшуулалт, олон улсын стандарт шаардлага хангасан угсралт суурьлуулалт, чадварлаг зөвлөх үйлчилгээ болон системийн ашиглалтын хугацааны турш дахь ашиглалт засвар үйлчилгээгээг дамжуулан Монголын эрчим хүчний салбарын хөгжилд хувь нэмэрээ оруулна.
 									</p>
 								</div>
 							<?php } else { ?>
@@ -39,7 +39,7 @@
 								</div>
 								<div class="col-md-5">
 									<p class="lead text-muted">
-										Contribute to Mongolian energy development through localization of high tech, installation and construction with global standard, excellent consulting service.
+										We contribute to Mongolian energy development through localization of high technology, installation, and construction with global standards, excellent consulting, and operation maintenance service during the whole life time of the system. 
 									</p>
 								</div>
 							<?php } ?>
@@ -53,9 +53,9 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<?php if ($_COOKIE['language'] == 'mon'){?>
-									<h2 class="text-white">Компани нь гадаадад үйл ажиллагаа явуулдаг компаниудын дэмжлэгтэйгээр мэдлэгийн бааз төслийг хэрэгжүүлэхээр зорьж байна.</h2>
+									<h2 class="text-white">Бид гадаад дотоодын төр, хувийн хэвшлийн байгууллагуудтай хамтран ажиллах  замаар мэдлэгт мэдлэгт суурилсан төсөл хөтөлбөрийг хэрэгжүүлэхийг зорьдог.</h2>
 								<?php } else { ?>
-									<h2 class="text-white">Company aims to take knowledge base project supported by companies specially from overseas.</h2>
+									<h2 class="text-white">The company aims to implement knowledge-based projects through cooperation with public and private organizations, both domestically and internationally.</h2>
 								<?php } ?>
 								
 							</div>
@@ -110,7 +110,7 @@
 										</div>
 										<div class="fbox-content">
 											<h3 class="text-white">Monitor Your Statistics</h3>
-											<p class="text-white mb-0">With help of our dedicated mobile and web platform, you can monitor your electric usage.</p>
+											<p class="text-white mb-0">A "G-Monitoring" web and app-based solution is presented for remote monitoring of solar power systems.</p>
 										</div>
 									</div>
 								</div>
@@ -122,7 +122,7 @@
 										</div>
 										<div class="fbox-content">
 											<h3 class="text-white">24x7 Access.</h3>
-											<p class="text-white mb-0">You can monitor your statistics 24x7 available, anytime & anywhere, we're always available for you.</p>
+											<p class="text-white mb-0">A webserver is implemented in a data center and accommodates the required functionality for remote monitoring and control of multipoint networks containing a variety of sensing and control nodes used within the solar system, utility grid, and electric consumption.</p>
 										</div>
 									</div>
 								</div>
@@ -210,14 +210,14 @@
 										<img src="/gpower/assets/news-3-min.jpg" alt="Featured image 1" class="card-img-top">
 										<div class="card-body">
 											<h5 class="card-title font-weight-semibold color">Угсралтын үйлчилгээ</h5>
-											<p class="card-text">50 кВт-ын нарны систем. PV модулийн хэмжээ нь 50 кВт. Sunny Boy 11kW Inverter 5ш. Байршил Улаанбаатар хот.</p>
+											<p class="card-text">Сэргээгдэх болон эрчим хүчний системийн инженерчлэл, тоног төхөөрөмжийн нийлүүлэлт, угсралт болон засвар үйлчилгээ</p>
 										</div>
 									</div>
 									<div class="card shadow-sm border-light mt-4">
 										<img src="/gpower/assets/about-1.jpg" alt="Featured image 2" class="card-img-top">
 										<div class="card-body">
 											<h5 class="card-title font-weight-semibold color">Зөвлөх үйлчилгээ</h5>
-											<p class="card-text">Манай баг энергийг хадгалах систем дээр ажилладаг.</p>
+											<p class="card-text">Эрчим хүчний систем дэх шийдэл боловсруулалт, ТЭЗҮ-ийн зөвлөх үйлчилгээ</p>
 										</div>
 									</div>
 								</div>
@@ -226,7 +226,7 @@
 										<img src="/gpower/assets/about-2.jpg" alt="Featured image 3" class="card-img-top">
 										<div class="card-body">
 											<h5 class="card-title font-weight-semibold color">Судалгаа болон хөгжүүлэлт</h5>
-											<p class="card-text">Өмнөд Солонгосын хувийн компанитай хамтран Smart Line Conditioner-ийг боловсруулсан.</p>
+											<p class="card-text">Чадлын электроник, автоматжуулалтын чиглэлийн судалгаа хөгжүүлэлт</p>
 										</div>
 									</div>
 								</div>
@@ -236,14 +236,14 @@
 										<img src="/gpower/assets/news-3-min.jpg" alt="Featured image 1" class="card-img-top">
 										<div class="card-body">
 											<h5 class="card-title font-weight-semibold color">System construction</h5>
-											<p class="card-text">50kW grid-tie solar system. PV module size is 50kW. Sunny Boy 11kW inverter 5pcs. Location is near Ulaanbaatar.</p>
+											<p class="card-text">EPC and operation maintenance for the renewable and electrical system</p>
 										</div>
 									</div>
 									<div class="card shadow-sm border-light mt-4">
 										<img src="/gpower/assets/about-1.jpg" alt="Featured image 2" class="card-img-top">
 										<div class="card-body">
 											<h5 class="card-title font-weight-semibold color">Consulting Service</h5>
-											<p class="card-text">Our team is working on Large Scale Energy Storage system.</p>
+											<p class="card-text">Consulting service for techno-economical feasible study and solution development within whole energy system</p>
 										</div>
 									</div>
 								</div>
@@ -252,7 +252,7 @@
 										<img src="/gpower/assets/about-2.jpg" alt="Featured image 3" class="card-img-top">
 										<div class="card-body">
 											<h5 class="card-title font-weight-semibold color">Research and Development</h5>
-											<p class="card-text">Developed Smart Line Conditioner with South Korean Private company.</p>
+											<p class="card-text">Research and development for Power electronics and automation</p>
 										</div>
 									</div>
 								</div>
