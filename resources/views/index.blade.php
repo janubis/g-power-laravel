@@ -160,17 +160,17 @@
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kW</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kWh</div>
 												<h5 class="mt-0 font-weight-medium">Суурилуулсан хүчин чадал</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>+</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>kWh</div>
 												<h5 class="mt-0 font-weight-medium">Үйлдвэрлэж буй чадал</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MWh</div>
+												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MW</div>
 												<h5 class="mt-0 font-weight-medium">Жилд үйлдвэрлэх боломжит эрчим хүч</h5>
 											</div>
 										</div>
@@ -192,12 +192,12 @@
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>+</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>kWh</div>
 												<h5 class="mt-0 font-weight-medium">Current Power</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MWh</div>
+												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MW</div>
 												<h5 class="mt-0 font-weight-medium">Yield Forecast Power</h5>
 											</div>
 										</div>
@@ -281,21 +281,21 @@
 							<div class="carousel-column-container">
 								<ul class="carousel-column column-1">
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-1.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[0]->cover) !!}');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-2.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[1]->cover) !!}');"></a>
 									</li>
 								</ul>
 								<ul class="carousel-column column-2">
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-3.jpg'); min-height: 300px"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[2]->cover) !!}'); min-height: 300px"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-4.jpg'); min-height: 280px"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[3]->cover) !!}'); min-height: 280px"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-5.jpg'); min-height: 200px"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[4]->cover) !!}'); min-height: 200px"></a>
 									</li>
 								</ul>
 							</div>
@@ -305,7 +305,7 @@
 							<div class="carousel-column-container">
 								<ul class="carousel-column column-1">
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-6.jpg'); min-height: 324px"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[5]->cover) !!}'); min-height: 324px"></a>
 									</li>
 									<li class="carousel-grid-item">
 										<div class="item bg-color d-flex align-items-center px-4" style="min-height: 480px">
@@ -318,13 +318,13 @@
 								</ul>
 								<ul class="carousel-column column-2">
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-8.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[6]->cover) !!}');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-9.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[1]->cover) !!}');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-10.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[2]->cover) !!}');"></a>
 									</li>
 								</ul>
 							</div>
@@ -334,7 +334,7 @@
 							<div class="carousel-column-container">
 								<ul class="carousel-column column-1">
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item bg-color d-flex align-items-center px-4 img-overlay" style="background-image: url('/gpower/assets/project-11.jpg'); min-height: 350px">
+										<a href="/projects" class="item bg-color d-flex align-items-center px-4 img-overlay" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[0]->cover) !!}'); min-height: 350px">
 											<blockquote class="blockquote border-0 mb-0">
 												<p class="mb-3 text-white">"The potential of renewable energy is immense."</p>
 												<footer class="blockquote-footer text-white-50 font-italic">Tulsi Tanti</footer>
@@ -342,18 +342,18 @@
 										</a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-12.jpg'); min-height: 453px"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[3]->cover) !!}'); min-height: 453px"></a>
 									</li>
 								</ul>
 								<ul class="carousel-column column-2">
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-13.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[4]->cover) !!}');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-7.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[5]->cover) !!}');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/gpower/assets/project-14.jpg');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[6]->cover) !!}');"></a>
 									</li>
 								</ul>
 							</div>

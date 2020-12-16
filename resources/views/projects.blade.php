@@ -87,9 +87,9 @@
 										</div>
 										<div class="portfolio-desc">
 											<p><span>Project Name: </span>{{$singleproject->title_mon}}</p>
-											<p><span>System Capacity: </span>{{$singleproject->capacity}}</p>
+											<p><span>System Capacity: </span>{{$singleproject->capacity}} kWh</p>
 											<p><span>Ordered Company: </span>{{$singleproject->ordering_company_mon}}</p>
-											<p><span>Yield Forecast: </span>{{$singleproject->yield_forecast}}</p>
+											<p><span>Yield Forecast: </span>{{$singleproject->yield_forecast}} MW</p>
 											<p><span>Delivered Date: </span>{{$singleproject->delivered_date}}</p>
 										</div>
 									</div>
