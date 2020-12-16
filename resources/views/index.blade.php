@@ -318,7 +318,7 @@
 								</ul>
 								<ul class="carousel-column column-2">
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[6]->cover) !!}');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[0]->cover) !!}');"></a>
 									</li>
 									<li class="carousel-grid-item">
 										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[1]->cover) !!}');"></a>
@@ -353,7 +353,7 @@
 										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[5]->cover) !!}');"></a>
 									</li>
 									<li class="carousel-grid-item">
-										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[6]->cover) !!}');"></a>
+										<a href="/projects" class="item" style="background-image: url('/storage/{!! str_replace('\\', '/', $projects[0]->cover) !!}');"></a>
 									</li>
 								</ul>
 							</div>
