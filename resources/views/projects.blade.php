@@ -78,19 +78,25 @@
 											<a href="/projects/{{$singleproject->id}}">
 												<img src="/storage/{!! str_replace('\\', '/', $singleproject->cover) !!}" alt="{{$singleproject->title}}">
 											</a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-													<a href="/projects/{{$singleproject->id}}" class="overlay-trigger-icon bg-light text-dark project-custom-sun" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-sun"></i></a>
+											
+												<div class="bg-overlay">
+													
+														<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+															<a href="/projects/{{$singleproject->id}}" class="overlay-trigger-icon bg-light text-dark project-custom-sun" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-sun"></i></a>
+														</div>
+														<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+													
 												</div>
-												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-											</div>
+											
 										</div>
 										<div class="portfolio-desc">
-											<p><span>Project Name: </span>{{$singleproject->title_mon}}</p>
-											<p><span>System Capacity: </span>{{$singleproject->capacity}} kWh</p>
-											<p><span>Ordered Company: </span>{{$singleproject->ordering_company_mon}}</p>
-											<p><span>Yield Forecast: </span>{{$singleproject->yield_forecast}} MW</p>
-											<p><span>Delivered Date: </span>{{$singleproject->delivered_date}}</p>
+											<a href="/projects/{{$singleproject->id}}">
+												<p><span>Project Name: </span>{{$singleproject->title_mon}}</p>
+												<p><span>System Capacity: </span>{{$singleproject->capacity}} kWh</p>
+												<p><span>Ordered Company: </span>{{$singleproject->ordering_company_mon}}</p>
+												<p><span>Yield Forecast: </span>{{$singleproject->yield_forecast}} MW</p>
+												<p><span>Delivered Date: </span>{{$singleproject->delivered_date}}</p>
+											</a>
 										</div>
 									</div>
 								</article>
@@ -102,19 +108,23 @@
 											<a href="/projects/{{$singleproject->id}}">
 												<img src="/storage/{!! str_replace('\\', '/', $singleproject->cover) !!}" alt="{{$singleproject->title}}">
 											</a>
-											<div class="bg-overlay">
-												<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-													<a href="/projects/{{$singleproject->id}}" class="overlay-trigger-icon bg-light text-dark project-custom-sun" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-sun"></i></a>
+											<a href="/projects/{{$singleproject->id}}">
+												<div class="bg-overlay">
+													<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+														<a href="/projects/{{$singleproject->id}}" class="overlay-trigger-icon bg-light text-dark project-custom-sun" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-sun"></i></a>
+													</div>
+													<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
 												</div>
-												<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-											</div>
+											</a>
 										</div>
 										<div class="portfolio-desc">
-											<p><span>Project Name: </span>{{$singleproject->title}}</p>
-											<p><span>System Capacity: </span>{{$singleproject->capacity}}</p>
-											<p><span>Ordered Company: </span>{{$singleproject->ordering_company}}</p>
-											<p><span>Yield Forecast: </span>{{$singleproject->yield_forecast}}</p>
-											<p><span>Delivered Date: </span>{{$singleproject->delivered_date}}</p>
+											<a href="/projects/{{$singleproject->id}}">
+												<p><span>Project Name: </span>{{$singleproject->title}}</p>
+												<p><span>System Capacity: </span>{{$singleproject->capacity}}</p>
+												<p><span>Ordered Company: </span>{{$singleproject->ordering_company}}</p>
+												<p><span>Yield Forecast: </span>{{$singleproject->yield_forecast}}</p>
+												<p><span>Delivered Date: </span>{{$singleproject->delivered_date}}</p>
+											</a>
 										</div>
 									</div>
 								</article>
