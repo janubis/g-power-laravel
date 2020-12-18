@@ -43,22 +43,26 @@
 					</div><!-- .portfolio-single-image end -->
 
 					<div class="row col-mb-50">
-						<div class="col-md-5 col-lg-4">
+						<div class="col-md-6 col-lg-6">
 							<!-- Portfolio Single - Meta
 							============================================= -->
 							<div class="card event-meta">
 								<div class="card-body">
 									<ul class="portfolio-meta mb-0">
 										<?php if ($_COOKIE['language'] == 'mon'){?>
-											<li><span><i class="icon-solar-panel"></i>Панелууд:</span> {{$currentproject->panel_count}}</li>
-											<li><span><i class="icon-calendar3"></i>Хүлээлгэн өгсөн өдөр:</span> {{$currentproject->delivered_date}}</li>
-											<li><span><i class="icon-lightbulb"></i>Суурилуулсан хүчин чадал:</span>{{$currentproject->capacity}}</li>
-											<li><span><i class="icon-line-sun"></i>Үйлдвэрлэсэн kWh:</span> {{$currentproject->yield_forecast}}</li>
+											<li><span><i class="icon-solar-panel"></i>Төслийн нэр:</span> {{$currentproject->title_mon}}</li>
+											<li><span><i class="icon-lightbulb"></i>Системийн чадал:</span>{{$currentproject->capacity}} кВт</li>
+											<li><span><i class="icon-users1"></i>Захиалагч компани:</span>{{$currentproject->ordering_company_mon}}</li>
+											<li><span><i class="icon-line-sun"></i>Жилд үйлдвэрлэх ЦЭХ:</span> {{$currentproject->yield_forecast}} МВт.ц</li>
+											<li><span><i class="icon-checkmark"></i>Жи-Пауэр-ын оролцоо:</span> {{$currentproject->role}}</li>
+											<li><span><i class="icon-calendar3"></i>Хүлээлгэн өгсөн огноо:</span> {{date('F Y', strtotime($currentproject->delivered_date))}}</li>
 										<?php } else { ?>
-											<li><span><i class="icon-solar-panel"></i>Panel Count:</span> {{$currentproject->panel_count}}</li>
-											<li><span><i class="icon-calendar3"></i>Delivered Date:</span> {{$currentproject->delivered_date}}</li>
-											<li><span><i class="icon-lightbulb"></i>Capacity:</span>{{$currentproject->capacity}}</li>
-											<li><span><i class="icon-line-sun"></i>Yield Forecast Per Year mWh:</span> {{$currentproject->yield_forecast}}</li>
+											<li><span><i class="icon-solar-panel"></i>Project Name:</span> {{$currentproject->title}}</li>
+											<li><span><i class="icon-lightbulb"></i>System Capacity:</span>{{$currentproject->capacity}} kW</li>
+											<li><span><i class="icon-users1"></i>Ordered Company:</span>{{$currentproject->ordering_company}}</li>
+											<li><span><i class="icon-line-sun"></i>Annual Yield Forecast:</span> {{$currentproject->yield_forecast}} MWh</li>
+											<li><span><i class="icon-checkmark"></i>Role of G-Power:</span> {{$currentproject->role}}</li>
+											<li><span><i class="icon-calendar3"></i>Delivered Date:</span> {{date('F Y', strtotime($currentproject->delivered_date))}}</li>
 										<?php } ?>
 										
 									</ul>
@@ -85,7 +89,7 @@
 
 						<!-- Portfolio Single Content
 						============================================= -->
-						<div class="col-md-7 col-lg-8 portfolio-single-content">
+						<div class="col-md-6 col-lg-6 portfolio-single-content">
 							<!-- Portfolio Single - Description
 							============================================= -->
 							<div class="fancy-title title-border">

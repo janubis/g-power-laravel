@@ -91,11 +91,12 @@
 										</div>
 										<div class="portfolio-desc">
 											<a href="/projects/{{$singleproject->id}}">
-												<p><span>Project Name: </span>{{$singleproject->title_mon}}</p>
-												<p><span>System Capacity: </span>{{$singleproject->capacity}} kWh</p>
-												<p><span>Ordered Company: </span>{{$singleproject->ordering_company_mon}}</p>
-												<p><span>Yield Forecast: </span>{{$singleproject->yield_forecast}} MW</p>
-												<p><span>Delivered Date: </span>{{$singleproject->delivered_date}}</p>
+												<p><span>Төслийн нэр: </span>{{$singleproject->title_mon}}</p>
+												<p><span>Системийн чадал: </span>{{$singleproject->capacity}} кВт</p>
+												<p><span>Захиалагч компани: </span>{{$singleproject->ordering_company_mon}}</p>
+												<p><span>Жилд үйлдвэрлэх ЦЭХ: </span>{{$singleproject->yield_forecast}} МВт.ц</p>
+												<p><span>Жи-Пауэр-ын оролцоо: </span>{{$singleproject->role}}</p>
+												<p><span>Хүлээлгэн өгсөн огноо: </span>{{date('F Y', strtotime($singleproject->delivered_date))}}</p>
 											</a>
 										</div>
 									</div>
@@ -120,10 +121,11 @@
 										<div class="portfolio-desc">
 											<a href="/projects/{{$singleproject->id}}">
 												<p><span>Project Name: </span>{{$singleproject->title}}</p>
-												<p><span>System Capacity: </span>{{$singleproject->capacity}}</p>
+												<p><span>System Capacity: </span>{{$singleproject->capacity}} kW</p>
 												<p><span>Ordered Company: </span>{{$singleproject->ordering_company}}</p>
-												<p><span>Yield Forecast: </span>{{$singleproject->yield_forecast}}</p>
-												<p><span>Delivered Date: </span>{{$singleproject->delivered_date}}</p>
+												<p><span>Annual Yield Forecast: </span>{{$singleproject->yield_forecast}} MWh</p>
+												<p><span>Role of G-Power: </span>{{$singleproject->role}}</p>
+												<p><span>Delivered Date: </span>{{date('F Y', strtotime($singleproject->delivered_date))}} </p>
 											</a>
 										</div>
 									</div>

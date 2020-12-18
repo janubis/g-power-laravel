@@ -53,7 +53,7 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<?php if ($_COOKIE['language'] == 'mon'){?>
-									<h2 class="text-white">Бид гадаад дотоодын төр, хувийн хэвшлийн байгууллагуудтай хамтран ажиллах  замаар мэдлэгт мэдлэгт суурилсан төсөл хөтөлбөрийг хэрэгжүүлэхийг зорьдог.</h2>
+									<h2 class="text-white">Бид гадаад дотоодын төр, хувийн хэвшлийн байгууллагуудтай хамтран ажиллах  замаар мэдлэгт суурилсан төсөл хөтөлбөрийг хэрэгжүүлэхийг зорьдог.</h2>
 								<?php } else { ?>
 									<h2 class="text-white">The company aims to implement knowledge-based projects through cooperation with public and private organizations, both domestically and internationally.</h2>
 								<?php } ?>
@@ -160,17 +160,17 @@
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kWh</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>кВт</div>
 												<h5 class="mt-0 font-weight-medium">Суурилуулсан хүчин чадал</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>kWh</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>кВт</div>
 												<h5 class="mt-0 font-weight-medium">Үйлдвэрлэж буй чадал</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MW</div>
+												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>МВт.ц</div>
 												<h5 class="mt-0 font-weight-medium">Жилд үйлдвэрлэх боломжит эрчим хүч</h5>
 											</div>
 										</div>
@@ -187,18 +187,18 @@
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kWh</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kW</div>
 												<h5 class="mt-0 font-weight-medium">Installed Capacity</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>kWh</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>kW</div>
 												<h5 class="mt-0 font-weight-medium">Current Power</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MW</div>
-												<h5 class="mt-0 font-weight-medium">Yield Forecast Power</h5>
+												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MWh</div>
+												<h5 class="mt-0 font-weight-medium">Annual Yield Forecast</h5>
 											</div>
 										</div>
 										<p class="text-muted">We offer engineering, procurement, construction, commissioning, operation and maintenance services for on- and off-grid PV systems and plants of any scale.</p>
@@ -366,13 +366,9 @@
 					<div class="container-full" style="padding: 120px 0 0 0">
 						<div class="heading-block border-bottom-0 center">
 							<?php if ($_COOKIE['language'] == 'mon'){?>
-								<div class="before-heading">Суурилуулсан нарны цахилгаан станцын  хүч</div>
-								<h2 class="nott font-weight-semibold"> {{$summapdata}} kWh</h2>
-								<p class="mb-0 mt-1"><span class="font-weight-semibold">Хэрэгжүүлсэн төслүүд</span></p>
+								<h2 class="nott font-weight-semibold">Бидний оролцоотой хэрэгжсэн төслүүдийн байршил</h2>
 							<?php } else { ?>
-								<div class="before-heading">installed power of built solar power station</div>
-								<h2 class="nott font-weight-semibold"> {{$summapdata}} kWh</h2>
-								<p class="mb-0 mt-1"><span class="font-weight-semibold">Implemented projects</span></p>
+								<h2 class="nott font-weight-semibold">Location of projects implemented with our participation</h2>
 							<?php } ?>
 							
 						</div>

@@ -104,3 +104,11 @@ h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > s
     height: 15px;
     overflow: hidden;
 }
+
+.portfolio-meta li span {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+}
