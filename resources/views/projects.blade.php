@@ -39,7 +39,77 @@
 		<section id="content">
 			<div class="content-wrap">
 				<div class="container clearfix">
+					<div class="col-md-12 pr-5">
+						<?php if ($_COOKIE['language'] == 'mon'){?>
+							
+							<div class="row">
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="0" data-to="{{$sumprojepc}}" data-refresh-interval="2" data-speed="600"></span></div>
+									<h5 class="mt-0 font-weight-medium">Угсралт болон Засвар Үйлчилгээний Төслүүд</h5>
+								</div>
 
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="0" data-to="{{$sumprojconsult}}" data-refresh-interval="2" data-speed="600"></span></div>
+									<h5 class="mt-0 font-weight-medium">Зөвлөх Үйлчилгээ</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="0" data-to="{{$sumprojresearch}}" data-refresh-interval="2" data-speed="600"></span></div>
+									<h5 class="mt-0 font-weight-medium">Судалгаа хөгжүүлэлт</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>кВт</div>
+									<h5 class="mt-0 font-weight-medium">Суурилуулсан хүчин чадал</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span> / {{$sumcapacity}} кВт</div>
+									<h5 class="mt-0 font-weight-medium">Үйлдвэрлэж буй чадал</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>МВт.ц</div>
+									<h5 class="mt-0 font-weight-medium">Жилд үйлдвэрлэх боломжит эрчим хүч</h5>
+								</div>
+							</div>
+							
+						<?php } else { ?>
+							
+							<div class="row">
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="0" data-to="{{$sumprojepc}}" data-refresh-interval="2" data-speed="600"></span></div>
+									<h5 class="mt-0 font-weight-medium">EPC and Operation Maintenance Projects</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="0" data-to="{{$sumprojconsult}}" data-refresh-interval="2" data-speed="600"></span></div>
+									<h5 class="mt-0 font-weight-medium">Consulting Service</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="0" data-to="{{$sumprojresearch}}" data-refresh-interval="2" data-speed="600"></span></div>
+									<h5 class="mt-0 font-weight-medium">Research and Development</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kW</div>
+									<h5 class="mt-0 font-weight-medium">Installed Capacity</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span> / {{$sumcapacity}} kW</div>
+									<h5 class="mt-0 font-weight-medium">Current Power</h5>
+								</div>
+
+								<div class="col-4 col-sm-4 mb-4">
+									<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MWh</div>
+									<h5 class="mt-0 font-weight-medium">Annual Yield Forecast</h5>
+								</div>
+							</div>
+							
+						<?php } ?>
+					</div>
 					<div class="grid-filter-wrap">
 
 						<!-- Portfolio Filter
@@ -68,7 +138,7 @@
 					<!-- Portfolio Items
 					============================================= -->
 					<div id="portfolio" class="portfolio row grid-container gutter-30" data-layout="fitRows">
-
+								
 						
 						@foreach ($projects as $singleproject)
 							<?php if ($_COOKIE['language'] == 'mon'){?>

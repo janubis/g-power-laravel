@@ -165,7 +165,7 @@
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>кВт</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span> / {{$sumcapacity}} кВт</div>
 												<h5 class="mt-0 font-weight-medium">Үйлдвэрлэж буй чадал</h5>
 											</div>
 
@@ -195,7 +195,7 @@
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>kW</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span> / {{$sumcapacity}} kW</div>
 												<h5 class="mt-0 font-weight-medium">Current Power</h5>
 											</div>
 

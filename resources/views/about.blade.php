@@ -73,33 +73,36 @@
 							<div class="row topmargin bottommargin gutter-lg-50 align-items-center">
 
 								<div class="col-md-6 pr-5">
-									<?php if ($_COOKIE['language'] == 'mon'){?>
+								<?php if ($_COOKIE['language'] == 'mon'){?>
 										<div class="heading-block mb-4 border-bottom-0">
 											<div class="before-heading">Компанийн тухай</div>
 											<h2 class="nott font-weight-semibold">Хамтдаа ажилла, хамтдаа бүтээцгээе.</h2>
 										</div>
 										<div class="row">
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="6" data-refresh-interval="2" data-speed="600"></span>+</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumproj}}" data-refresh-interval="2" data-speed="600"></span>+</div>
 												<h5 class="mt-0 font-weight-medium">Төслүүд</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="370" data-refresh-interval="11" data-speed="900"></span>MW</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span> / {{$sumcapacity}} кВт</div>
 												<h5 class="mt-0 font-weight-medium">Суурилуулсан хүчин чадал</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="210" data-refresh-interval="3" data-speed="1000"></span>+</div>
-												<h5 class="mt-0 font-weight-medium">Панелууд</h5>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span>кВт</div>
+												<h5 class="mt-0 font-weight-medium">Үйлдвэрлэж буй чадал</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="100" data-to="4500" data-refresh-interval="100" data-speed="1500"></span>kWh</div>
-												<h5 class="mt-0 font-weight-medium">Үйлдвэрлэсэн kWh</h5>
+												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>МВт.ц</div>
+												<h5 class="mt-0 font-weight-medium">Жилд үйлдвэрлэх боломжит эрчим хүч</h5>
 											</div>
 										</div>
 										<p class="text-muted">Бид сүлжээний болон гадна сүлжээний PV систем, үйлдвэрүүдийн инженерийн, хангамж, барилга угсралт, ашиглалт, засвар үйлчилгээний үйлчилгээг санал болгодог.</p>
+										<p>
+											<a href="/projects" class="button button-rounded button-large btn-block m-0 center font-weight-medium">ТӨСЛҮҮДИЙН ТАЛААР ИЛҮҮ ДЭЛГЭРЭНГҮЙ ҮЗЭХ</a>
+										</p>
 									<?php } else { ?>
 										<div class="heading-block mb-4 border-bottom-0">
 											<div class="before-heading">About Us</div>
@@ -107,28 +110,28 @@
 										</div>
 										<div class="row">
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="6" data-refresh-interval="2" data-speed="600"></span>+</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumproj}}" data-refresh-interval="2" data-speed="600"></span>+</div>
 												<h5 class="mt-0 font-weight-medium">Projects</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="370" data-refresh-interval="11" data-speed="900"></span>MW</div>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumcapacity}}" data-refresh-interval="11" data-speed="900"></span>kW</div>
 												<h5 class="mt-0 font-weight-medium">Installed Capacity</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="1" data-to="210" data-refresh-interval="3" data-speed="1000"></span>+</div>
-												<h5 class="mt-0 font-weight-medium">Panels</h5>
+												<div class="counter color font-weight-semibold"><span data-from="1" data-to="{{$sumpanel}}" data-refresh-interval="3" data-speed="1000"></span> / {{$sumcapacity}} kW</div>
+												<h5 class="mt-0 font-weight-medium">Current Power</h5>
 											</div>
 
 											<div class="col-6 col-sm-6 mb-4">
-												<div class="counter color font-weight-semibold"><span data-from="100" data-to="4500" data-refresh-interval="100" data-speed="1500"></span>kWh</div>
-												<h5 class="mt-0 font-weight-medium">Generated kWh</h5>
+												<div class="counter color font-weight-semibold"><span data-from="100" data-to="{{$sumyield}}" data-refresh-interval="100" data-speed="1500"></span>MWh</div>
+												<h5 class="mt-0 font-weight-medium">Annual Yield Forecast</h5>
 											</div>
 										</div>
 										<p class="text-muted">We offer engineering, procurement, construction, commissioning, operation and maintenance services for on- and off-grid PV systems and plants of any scale.</p>
+										
 									<?php } ?>
-									
 								</div>
 								<div class="col-lg-6 p-lg-5">
 									<img src="/gpower/assets/about-2.jpg" alt="Image">

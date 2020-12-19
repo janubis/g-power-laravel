@@ -81,6 +81,27 @@ class FrontController extends Controller
 
     public function about()
     {
+        $data['projects'] = Project::orderBy('id','desc')->paginate(100);
+
+        $summapdata = 0;
+        foreach ($data['projects'] as $eachdata1) {
+            $summapdata = $summapdata + floatval($eachdata1->capacity);
+        }
+        $sumproj = Project::count();
+        $sumpanel = 0;
+        $sumyield = 0;
+        $sumcapacity = 0;
+        foreach ($data['projects'] as $eachdata2) {
+            $sumpanel = $sumpanel + floatval($eachdata2->panel_count);
+            $sumyield = $sumyield + floatval($eachdata2->yield_forecast);
+            $sumcapacity = $sumcapacity + floatval($eachdata2->capacity);
+        }
+        $data['summapdata'] = $summapdata;
+        $data['sumproj'] = $sumproj;
+        $data['sumpanel'] = $sumpanel;
+        $data['sumyield'] = $sumyield;
+        $data['sumcapacity'] = $sumcapacity;
+
         $data['testimonials'] = Testimonial::orderBy('id','desc')->paginate(5);
         $data['general'] = General::findOrFail(1);
         $data['generalmn'] = General::findOrFail(2);
@@ -124,6 +145,33 @@ class FrontController extends Controller
 
     public function projects()
     {
+        $data['projects'] = Project::orderBy('id','desc')->paginate(100);
+
+        $summapdata = 0;
+        foreach ($data['projects'] as $eachdata1) {
+            $summapdata = $summapdata + floatval($eachdata1->capacity);
+        }
+        $sumprojepc = Project::where('category', '=', 'operation')->count();
+        $sumprojconsult = Project::where('category', '=', 'consulting')->count();
+        $sumprojresearch = Project::where('category', '=', 'research')->count();
+        $sumproj = Project::count();
+        $sumpanel = 0;
+        $sumyield = 0;
+        $sumcapacity = 0;
+        foreach ($data['projects'] as $eachdata2) {
+            $sumpanel = $sumpanel + floatval($eachdata2->panel_count);
+            $sumyield = $sumyield + floatval($eachdata2->yield_forecast);
+            $sumcapacity = $sumcapacity + floatval($eachdata2->capacity);
+        }
+        $data['summapdata'] = $summapdata;
+        $data['sumproj'] = $sumproj;
+        $data['sumprojepc'] = $sumprojepc;
+        $data['sumprojconsult'] = $sumprojconsult;
+        $data['sumprojresearch'] = $sumprojresearch;
+        $data['sumpanel'] = $sumpanel;
+        $data['sumyield'] = $sumyield;
+        $data['sumcapacity'] = $sumcapacity;
+
         $data['general'] = General::findOrFail(1);
         $data['generalmn'] = General::findOrFail(2);
         $data['projects'] = Project::orderBy('id','desc')->paginate(100);
