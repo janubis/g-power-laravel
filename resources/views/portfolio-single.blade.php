@@ -50,19 +50,19 @@
 								<div class="card-body">
 									<ul class="portfolio-meta mb-0">
 										<?php if ($_COOKIE['language'] == 'mon'){?>
-											<li><span><i class="icon-solar-panel"></i>Төслийн нэр:</span> {{$currentproject->title_mon}}</li>
-											<li><span><i class="icon-lightbulb"></i>Системийн чадал:</span>{{$currentproject->capacity}} кВт</li>
-											<li><span><i class="icon-users1"></i>Захиалагч компани:</span>{{$currentproject->ordering_company_mon}}</li>
-											<li><span><i class="icon-line-sun"></i>Жилд үйлдвэрлэх ЦЭХ:</span> {{$currentproject->yield_forecast}} МВт.ц</li>
-											<li><span><i class="icon-checkmark"></i>Жи-Пауэр-ын оролцоо:</span> {{$currentproject->role}}</li>
-											<li><span><i class="icon-calendar3"></i>Хүлээлгэн өгсөн огноо:</span> {{date('F Y', strtotime($currentproject->delivered_date))}}</li>
+											<li><span>Төслийн нэр:</span> {{$currentproject->title_mon}}</li>
+											<li><span>Системийн чадал:</span>{{$currentproject->capacity}} кВт</li>
+											<li><span>Захиалагч компани:</span>{{$currentproject->ordering_company_mon}}</li>
+											<li><span>Жилд үйлдвэрлэх ЦЭХ:</span> {{$currentproject->yield_forecast}} МВт.ц</li>
+											<li><span>Жи-Пауэр-ын оролцоо:</span> {{$currentproject->role}}</li>
+											<li><span>Хүлээлгэн өгсөн огноо:</span> {{date('F Y', strtotime($currentproject->delivered_date))}}</li>
 										<?php } else { ?>
-											<li><span><i class="icon-solar-panel"></i>Project Name:</span> {{$currentproject->title}}</li>
-											<li><span><i class="icon-lightbulb"></i>System Capacity:</span>{{$currentproject->capacity}} kW</li>
-											<li><span><i class="icon-users1"></i>Ordered Company:</span>{{$currentproject->ordering_company}}</li>
-											<li><span><i class="icon-line-sun"></i>Annual Yield Forecast:</span> {{$currentproject->yield_forecast}} MWh</li>
-											<li><span><i class="icon-checkmark"></i>Role of G-Power:</span> {{$currentproject->role}}</li>
-											<li><span><i class="icon-calendar3"></i>Delivered Date:</span> {{date('F Y', strtotime($currentproject->delivered_date))}}</li>
+											<li><span>Project Name:</span> {{$currentproject->title}}</li>
+											<li><span>System Capacity:</span>{{$currentproject->capacity}} kW</li>
+											<li><span>Ordered Company:</span>{{$currentproject->ordering_company}}</li>
+											<li><span>Annual Yield Forecast:</span> {{$currentproject->yield_forecast}} MWh</li>
+											<li><span>Role of G-Power:</span> {{$currentproject->role}}</li>
+											<li><span>Delivered Date:</span> {{date('F Y', strtotime($currentproject->delivered_date))}}</li>
 										<?php } ?>
 										
 									</ul>

@@ -175,6 +175,9 @@
 											</div>
 										</div>
 										<p class="text-muted">Бид сүлжээний болон гадна сүлжээний PV систем, үйлдвэрүүдийн инженерийн, хангамж, барилга угсралт, ашиглалт, засвар үйлчилгээний үйлчилгээг санал болгодог.</p>
+										<p>
+											<a href="/projects" class="button button-rounded button-large btn-block m-0 center font-weight-medium">ТӨСЛҮҮДИЙН ТАЛААР ИЛҮҮ ДЭЛГЭРЭНГҮЙ ҮЗЭХ</a>
+										</p>
 									<?php } else { ?>
 										<div class="heading-block mb-4 border-bottom-0">
 											<div class="before-heading">About Us</div>
@@ -202,6 +205,9 @@
 											</div>
 										</div>
 										<p class="text-muted">We offer engineering, procurement, construction, commissioning, operation and maintenance services for on- and off-grid PV systems and plants of any scale.</p>
+										<p>
+											<a href="/projects" class="button button-rounded button-large btn-block m-0 center font-weight-medium">MORE ABOUT THE PROJECTS</a>
+										</p>
 									<?php } ?>
 							</div>
 							<?php if ($_COOKIE['language'] == 'mon'){?>

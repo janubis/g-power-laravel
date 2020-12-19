@@ -73,7 +73,7 @@ h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > s
 }
 .portfolio-desc span {
     display: contents;
-    color: #198e0e;
+    color: #000;
     font-weight: 700;
 }
 #content .portfolio-desc  p {
@@ -83,7 +83,8 @@ h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > s
     position: relative;
     z-index: 6;
     padding: 30px 25px 10px 25px;
-    
+    margin-top: -190px;
+    background-color: rgba(255,255,255,0.6);
 }
 .portfolio-item .grid-inner {
 	border: 1px solid #d2d2d2;
@@ -103,12 +104,29 @@ h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > s
     margin-bottom: 10px;
     height: 15px;
     overflow: hidden;
+    color: #000;
 }
-
+#content .portfolio-desc p span {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+}
+.portfolio-meta li {
+    line-height: 1;
+    margin-bottom: 10px;
+    height: 20px;
+    overflow: hidden;
+    color: #000;
+    font-size: 1rem;
+}
 .portfolio-meta li span {
     display: inline-block;
     width: auto;
     margin-right: 10px;
     font-weight: bold;
     color: #333;
+
+    
 }
