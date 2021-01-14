@@ -54,7 +54,7 @@
 											<li><span>Системийн чадал:</span>{{$currentproject->capacity}} кВт</li>
 											<li><span>Захиалагч компани:</span>{{$currentproject->ordering_company_mon}}</li>
 											<li><span>Жилд үйлдвэрлэх ЦЭХ:</span> {{$currentproject->yield_forecast}} МВт.ц</li>
-											<li><span>Жи-Пауэр-ын оролцоо:</span> {{$currentproject->role}}</li>
+											<li><span>Жи-Пауэр-ын оролцоо:</span> {{$currentproject->role_mon}}</li>
 											<li><span>Хүлээлгэн өгсөн огноо:</span> {{date('F Y', strtotime($currentproject->delivered_date))}}</li>
 										<?php } else { ?>
 											<li><span>Project Name:</span> {{$currentproject->title}}</li>

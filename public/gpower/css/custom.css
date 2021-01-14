@@ -126,7 +126,8 @@ h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > s
     width: auto;
     margin-right: 10px;
     font-weight: bold;
-    color: #333;
-
-    
+    color: #333; 
+}
+.text-align-center {
+    text-align: center;
 }

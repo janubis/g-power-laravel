@@ -87,6 +87,9 @@ class FrontController extends Controller
         foreach ($data['projects'] as $eachdata1) {
             $summapdata = $summapdata + floatval($eachdata1->capacity);
         }
+        $sumprojepc = Project::where('category', '=', 'operation')->count();
+        $sumprojconsult = Project::where('category', '=', 'consulting')->count();
+        $sumprojresearch = Project::where('category', '=', 'research')->count();
         $sumproj = Project::count();
         $sumpanel = 0;
         $sumyield = 0;
@@ -98,6 +101,9 @@ class FrontController extends Controller
         }
         $data['summapdata'] = $summapdata;
         $data['sumproj'] = $sumproj;
+        $data['sumprojepc'] = $sumprojepc;
+        $data['sumprojconsult'] = $sumprojconsult;
+        $data['sumprojresearch'] = $sumprojresearch;
         $data['sumpanel'] = $sumpanel;
         $data['sumyield'] = $sumyield;
         $data['sumcapacity'] = $sumcapacity;
