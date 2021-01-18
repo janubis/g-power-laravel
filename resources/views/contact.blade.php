@@ -130,33 +130,62 @@
 								<form class="mb-0" action="/contact" method="post">
 									@csrf
 									
+									<?php if ($_COOKIE['language'] == 'mon'){?>
+										<div class="row">
+											<div class="col-md-12 form-group">
+												<label for="template-contactform-name">Нэр<small class="text-danger">*</small></label>
+												<input type="text" id="template-contactform-name" name="name" value="" class="form-control required" />
+											</div>
 
-									<div class="row">
-										<div class="col-md-12 form-group">
-											<label for="template-contactform-name">Name<small class="text-danger">*</small></label>
-											<input type="text" id="template-contactform-name" name="name" value="" class="form-control required" />
+											<div class="col-md-12 form-group">
+												<label for="template-contactform-email">И-Мэйл<small class="text-danger">*</small></label>
+												<input type="email" id="template-contactform-email" name="email" value="" class="required email form-control" />
+											</div>
+
+											<div class="col-md-12 form-group">
+												<label for="template-contactform-phone">Утас<small class="text-danger">*</small></label>
+												<input type="text" id="template-contactform-phone" name="phone_number" value="" class="required form-control" />
+											</div>
+
+
+											<div class="col-12 form-group">
+												<label for="template-contactform-message">Агуулга<small class="text-danger">*</small></label>
+												<textarea class="required form-control" id="template-contactform-message" name="message" rows="6" cols="30"></textarea>
+											</div>
+
+											<div class="col-12 form-group">
+												<button class="button button-rounded button-xlarge m-0 center font-weight-medium nott ls0 font-weight-normal" type="submit" value="submit">Илгээх</button>
+											</div>
 										</div>
+									<?php } else { ?>
+										<div class="row">
+											<div class="col-md-12 form-group">
+												<label for="template-contactform-name">Name<small class="text-danger">*</small></label>
+												<input type="text" id="template-contactform-name" name="name" value="" class="form-control required" />
+											</div>
 
-										<div class="col-md-12 form-group">
-											<label for="template-contactform-email">Email<small class="text-danger">*</small></label>
-											<input type="email" id="template-contactform-email" name="email" value="" class="required email form-control" />
+											<div class="col-md-12 form-group">
+												<label for="template-contactform-email">Email<small class="text-danger">*</small></label>
+												<input type="email" id="template-contactform-email" name="email" value="" class="required email form-control" />
+											</div>
+
+											<div class="col-md-12 form-group">
+												<label for="template-contactform-phone">Phone<small class="text-danger">*</small></label>
+												<input type="text" id="template-contactform-phone" name="phone_number" value="" class="required form-control" />
+											</div>
+
+
+											<div class="col-12 form-group">
+												<label for="template-contactform-message">Message<small class="text-danger">*</small></label>
+												<textarea class="required form-control" id="template-contactform-message" name="message" rows="6" cols="30"></textarea>
+											</div>
+
+											<div class="col-12 form-group">
+												<button class="button button-rounded button-xlarge m-0 center font-weight-medium nott ls0 font-weight-normal" type="submit" value="submit">Send Message</button>
+											</div>
 										</div>
-
-										<div class="col-md-12 form-group">
-											<label for="template-contactform-phone">Phone<small class="text-danger">*</small></label>
-											<input type="text" id="template-contactform-phone" name="phone_number" value="" class="required form-control" />
-										</div>
-
-
-										<div class="col-12 form-group">
-											<label for="template-contactform-message">Message<small class="text-danger">*</small></label>
-											<textarea class="required form-control" id="template-contactform-message" name="message" rows="6" cols="30"></textarea>
-										</div>
-
-										<div class="col-12 form-group">
-											<button class="button button-rounded button-xlarge m-0 center font-weight-medium nott ls0 font-weight-normal" type="submit" value="submit">Send Message</button>
-										</div>
-									</div>
+									<?php } ?>
+									
 								</form>
 							</div>
 						</div>

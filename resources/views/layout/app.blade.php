@@ -98,7 +98,7 @@
 									</ul>
 								</li>
 							</ul>
-							<a class="top-phone" href="http://119.40.99.111"><i class="icon-solar-panel"></i> <span class="d-none d-md-inline-block"><?php if ($_COOKIE['language'] == 'mon'){ ?>{{$generalmn->menu_dashboard}}<?php } else { ?>{{$general->menu_dashboard}}<?php } ?></span></a>
+							<a class="top-phone" href="http://api.g-power.mn"><i class="icon-solar-panel"></i> <span class="d-none d-md-inline-block"><?php if ($_COOKIE['language'] == 'mon'){ ?>{{$generalmn->menu_dashboard}}<?php } else { ?>{{$general->menu_dashboard}}<?php } ?></span></a>
 						</div>
 
 						<div id="primary-menu-trigger">

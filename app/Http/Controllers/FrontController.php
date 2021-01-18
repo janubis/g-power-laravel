@@ -42,6 +42,7 @@ class FrontController extends Controller
         $data['general'] = General::findOrFail(1);
         $data['generalmn'] = General::findOrFail(2);
         $data['projects'] = Project::orderBy('id','desc')->paginate(100);
+        $data['projects_operation'] = Project::where('category', '=', 'operation')->orderBy('delivered_date','desc')->paginate(100);
         $data['news'] = News::where('language', '=', 'eng')->orderBy('id','desc')->paginate(3);
         $data['newsmn'] = News::where('language', '=', 'mon')->orderBy('id','desc')->paginate(3);
         $data['contactInfo'] = DB::table('contacts')->first();
@@ -55,7 +56,7 @@ class FrontController extends Controller
         $sumpanel = 0;
         $sumyield = 0;
         $sumcapacity = 0;
-        foreach ($data['projects'] as $eachdata2) {
+        foreach ($data['projects_operation'] as $eachdata2) {
             $sumpanel = $sumpanel + floatval($eachdata2->panel_count);
             $sumyield = $sumyield + floatval($eachdata2->yield_forecast);
             $sumcapacity = $sumcapacity + floatval($eachdata2->capacity);
@@ -82,7 +83,7 @@ class FrontController extends Controller
     public function about()
     {
         $data['projects'] = Project::orderBy('id','desc')->paginate(100);
-
+        $data['projects_operation'] = Project::where('category', '=', 'operation')->orderBy('delivered_date','desc')->paginate(100);
         $summapdata = 0;
         foreach ($data['projects'] as $eachdata1) {
             $summapdata = $summapdata + floatval($eachdata1->capacity);
@@ -94,7 +95,7 @@ class FrontController extends Controller
         $sumpanel = 0;
         $sumyield = 0;
         $sumcapacity = 0;
-        foreach ($data['projects'] as $eachdata2) {
+        foreach ($data['projects_operation'] as $eachdata2) {
             $sumpanel = $sumpanel + floatval($eachdata2->panel_count);
             $sumyield = $sumyield + floatval($eachdata2->yield_forecast);
             $sumcapacity = $sumcapacity + floatval($eachdata2->capacity);
@@ -151,8 +152,8 @@ class FrontController extends Controller
 
     public function projects()
     {
-        $data['projects'] = Project::orderBy('id','desc')->paginate(100);
-
+        $data['projects'] = Project::orderBy('delivered_date','desc')->paginate(100);
+        $data['projects_operation'] = Project::where('category', '=', 'operation')->orderBy('delivered_date','desc')->paginate(100);
         $summapdata = 0;
         foreach ($data['projects'] as $eachdata1) {
             $summapdata = $summapdata + floatval($eachdata1->capacity);
@@ -164,7 +165,7 @@ class FrontController extends Controller
         $sumpanel = 0;
         $sumyield = 0;
         $sumcapacity = 0;
-        foreach ($data['projects'] as $eachdata2) {
+        foreach ($data['projects_operation'] as $eachdata2) {
             $sumpanel = $sumpanel + floatval($eachdata2->panel_count);
             $sumyield = $sumyield + floatval($eachdata2->yield_forecast);
             $sumcapacity = $sumcapacity + floatval($eachdata2->capacity);

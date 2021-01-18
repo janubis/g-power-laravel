@@ -6,7 +6,7 @@
 
 		};
 
-		setInterval(myTimer, 5000);
+		setInterval(myTimer, 10000);
 
 		function myTimer(){
 
@@ -28,7 +28,7 @@
 			    dataPutter(webSiteJsDatas);
 			    //console.log(webSiteJsDatas.hourlyData);
 			});
-			console.log('changed');
+			//console.log('changed');
 		}
 			
 
@@ -42,8 +42,8 @@
 
 			var jsonDataHourly = jsonData.hourlyData;
 			var jsonPowerData = jsonData.powerData;
-			console.log(jsonDataHourly);
-			console.log(jsonPowerData);
+			//console.log(jsonDataHourly);
+			//console.log(jsonPowerData);
 			setTimeout(function(){
 			    for(var i = 0; i < jsonDataHourly.length; i++) {
 				    totalYear = totalYear + jsonDataHourly[i].year;
@@ -54,18 +54,16 @@
 					totalImplement = totalOverall + jsonPowerData[i].total_capacity;
 				}
 				$("#totalCurrent").html(totalCurrent.toFixed(1));
-				$("#totalImplement").html(totalImplement.toFixed(1));
 				$("#totalOverall").html((totalOverall/1000).toFixed(1));
-				$("#totalYear").html((totalYear/1000).toFixed(1));
 
 				totalCurrent = 0;
 				totalImplement = 0;
 				totalOverall = 0;
 				totalYear = 0;
 
-				console.log(totalCurrent);
-				console.log('now changed');
-			}, 5000)
+				//console.log(totalCurrent);
+				//console.log('now changed');
+			}, 10000)
 			//console.log(jsonDataHourly.length);
 			
 
