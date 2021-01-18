@@ -487,7 +487,7 @@
 @section('pagejavascript')
     @parent
 	<script src="https://maps.google.com/maps/api/js?key={{env('GOOGLE_KEY')}}"></script>
-	<script src="/gpower/js/serverHook.js"></script>
+	<!-- <script src="/gpower/js/server.js"></script>-->
 	<script>
 		$(".map-cover-section").on("click",function(){
 			console.log('hes clicked');
